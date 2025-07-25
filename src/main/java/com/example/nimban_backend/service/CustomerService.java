@@ -17,4 +17,5 @@ public interface CustomerService {
 
   void deleteCustomer(Long id);
 
+  List<Customer> findByEmailIgnoreCase(String email);
 }

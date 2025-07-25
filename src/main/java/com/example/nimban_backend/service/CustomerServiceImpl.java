@@ -56,6 +56,9 @@ public class CustomerServiceImpl implements CustomerService {
         customerToUpdate.setLastAccessedId(customer.getLastAccessedId());
         customerToUpdate.setTeammatesId(customer.getTeammatesId());
         customerToUpdate.setProjectsId(customer.getProjectsId());
+        customerToUpdate.setBirthYear(customer.getBirthYear());
+        customerToUpdate.setBirthMonth(customer.getBirthMonth());
+        customerToUpdate.setBirthDay(customer.getBirthDay());
 
         // Save the updated customer back to the database
         return customerRepository.save(customerToUpdate);
@@ -88,14 +91,31 @@ public class CustomerServiceImpl implements CustomerService {
         if (updates.getProjectsId() != null) {
             customerToUpdate.setProjectsId(updates.getProjectsId());
         }
+        if (updates.getProjectsId() != null) {
+            customerToUpdate.setBirthYear(updates.getBirthYear());
+        }
+        if (updates.getProjectsId() != null) {
+            customerToUpdate.setBirthMonth(updates.getBirthMonth());
+        }
+        if (updates.getBirthDay() != null) {
+            customerToUpdate.setBirthDay(updates.getBirthDay());
+        }
 
         return customerRepository.save(customerToUpdate);
     }
+
+
 
     // Delete
     @Override
     public void deleteCustomer(Long id) {
         customerRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Customer> findByEmailIgnoreCase(String email) {
+        List<Customer> foundCustomers = customerRepository.findByEmailIgnoreCase(email);
+        return foundCustomers;
     }
 
 }

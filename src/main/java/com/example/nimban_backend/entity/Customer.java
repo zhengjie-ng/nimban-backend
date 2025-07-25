@@ -45,6 +45,12 @@ public class Customer {
     private List<Long> teammatesId;
     @Column(name = "project_ids")
     private List<Long> projectsId;
+    @Column(name = "birth_year")
+    private Integer birthYear;
+    @Column(name = "birth_month")
+    private Integer birthMonth;
+    @Column(name = "birth_day")
+    private Integer birthDay;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     @Setter(lombok.AccessLevel.NONE)

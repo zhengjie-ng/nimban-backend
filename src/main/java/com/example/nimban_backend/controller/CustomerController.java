@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.nimban_backend.entity.Customer;
@@ -37,7 +38,13 @@ public class CustomerController {
     // READ
     // Read all
     @GetMapping
-    public ResponseEntity<List<Customer>> getAllCustomers() {
+    public ResponseEntity<List<Customer>> getAllCustomers(@RequestParam(required = false) String email) {
+
+        if(email != null && !email.trim().isEmpty()){
+            List<Customer> customers = customerService.findByEmailIgnoreCase(email);
+            return new ResponseEntity<>(customers, HttpStatus.OK);
+        }
+
         List<Customer> allCustomers = customerService.getAllCustomers();
         return new ResponseEntity<>(allCustomers, HttpStatus.OK);
     }

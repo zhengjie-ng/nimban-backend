@@ -39,13 +39,13 @@ public class DataLoader {
 
         // Load customers data
         customerRepository.save(Customer.builder().firstName("Alan").lastName("Walker")
-                .email("alan@nimban.com").password("11111111").projectsId(Arrays.asList(1L, 2L)).build());
+                .email("alan@nimban.com").password("11111111").projectsId(Arrays.asList(1L, 2L)).birthYear(1980).birthMonth(1).birthDay(1).build());
         customerRepository.save(Customer.builder().firstName("Becky").lastName("Sim")
-                .email("becky@nimban.com").password("11111111").projectsId(Arrays.asList(3L)).build());
+                .email("becky@nimban.com").password("11111111").projectsId(Arrays.asList(3L)).birthYear(1980).birthMonth(1).birthDay(1).build());
         customerRepository.save(Customer.builder().firstName("Cindy").projectsId(Arrays.asList(4L)).lastName("Lope")
-                .email("cindy@nimban.com").password("11111111").build());
+                .email("cindy@nimban.com").password("11111111").birthYear(1980).birthMonth(1).birthDay(1).build());
         customerRepository.save(Customer.builder().firstName("Danny").lastName("Smith")
-                .email("danny@nimban.com").password("11111111").projectsId(Arrays.asList(5L)).build());
+                .email("danny@nimban.com").password("11111111").projectsId(Arrays.asList(5L)).birthYear(1980).birthMonth(1).birthDay(1).build());
 
         Project project1 = projectRepository.save(Project.builder().name("Monday").taskTotalId(4L).authorId(1L).build());
         Project project2 = projectRepository.save(Project.builder().name("Tuesday").taskTotalId(1L).authorId(1L).build());
