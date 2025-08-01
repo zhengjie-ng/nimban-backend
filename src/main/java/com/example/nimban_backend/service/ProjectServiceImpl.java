@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.example.nimban_backend.entity.Project;
 import com.example.nimban_backend.entity.Task;
 import com.example.nimban_backend.entity.TaskColumn;
+import com.example.nimban_backend.exception.ProjectNotFoundException;
 import com.example.nimban_backend.repository.ProjectRepository;
 import com.example.nimban_backend.repository.TaskColumnRepository;
 import com.example.nimban_backend.repository.TaskRepository;
@@ -37,12 +38,13 @@ public class ProjectServiceImpl implements ProjectService {
 
     // Read
     // Read One
-    @Override
+     @Override
     public Project getProject(Long id) {
-        Project foundProject = projectRepository.findById(id).get();
+        return projectRepository.findById(id)
+            .orElseThrow(() -> new ProjectNotFoundException(id));
 
         // Retrieve the project object and return
-        return foundProject;
+        // return foundProject;
     }
 
     // Read All
@@ -56,7 +58,8 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public Project updateProject(Long id, Project project) {
         // Retrieve the project from the database
-        Project projectToUpdate = projectRepository.findById(id).get();
+        Project projectToUpdate = projectRepository.findById(id)
+            .orElseThrow(() -> new ProjectNotFoundException(id));
         // Update the fields of the project retrieved
         projectToUpdate.setName(project.getName());
         projectToUpdate.setTeammatesId(project.getTeammatesId());
@@ -69,9 +72,10 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     // Patch
-    @Override
+     @Override
     public Project patchProject(Long id, Project updates) {
-        Project projectToUpdate = getProject(id);
+        Project projectToUpdate = projectRepository.findById(id)
+                .orElseThrow(() -> new ProjectNotFoundException(id));
 
         if (updates.getName() != null) {
             projectToUpdate.setName(updates.getName());
@@ -95,12 +99,15 @@ public class ProjectServiceImpl implements ProjectService {
     // Delete
     @Override
     public void deleteProject(Long id) {
-        projectRepository.deleteById(id);
+        Project project = projectRepository.findById(id)
+            .orElseThrow(() -> new ProjectNotFoundException(id));
+        projectRepository.delete(project);
     }
 
     @Override
     public TaskColumn addColumnToProject(Long id, TaskColumn taskColumn) {
-        Project selectedProject = projectRepository.findById(id).get();
+        Project selectedProject = projectRepository.findById(id)
+            .orElseThrow(() -> new ProjectNotFoundException(id));
         taskColumn.setProject(selectedProject);
         return taskColumnRepository.save(taskColumn);
     }
@@ -108,7 +115,8 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public Task addTaskToProject(Long id, Task task) {
         // Retrieve the taskColumn from the database
-        Project selectedProject = projectRepository.findById(id).get();
+        Project selectedProject = projectRepository.findById(id)
+            .orElseThrow(() -> new ProjectNotFoundException(id));
         // Add the task to the taskcolumn
         task.setProject(selectedProject);
         return taskRepository.save(task);
