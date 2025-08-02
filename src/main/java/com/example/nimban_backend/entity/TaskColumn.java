@@ -14,6 +14,10 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -34,8 +38,13 @@ public class TaskColumn {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
+    @NotBlank(message = "Task column name must not be blank")
+    @Size(min = 3, max = 30, message = "Task column name must be between 3 and 30 characters")
     @Column(name = "name")
     private String name;
+    
+    @NotNull(message = "Task column position must not be null")
     @Column(name = "position")
     private Integer position;
 

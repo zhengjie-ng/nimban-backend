@@ -17,6 +17,12 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -37,15 +43,27 @@ public class Project {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
     @Column(name = "name")
+    @NotBlank(message = "Project name is required")
+    @Size(min = 3, max = 30, message = "Project name must be between 3 and 30 characters")
     private String name;
+
     @Column(name = "proj_teammates_id")
-    private List<Long> teammatesId;
+    @NotEmpty(message = "Teammates ID list cannot be empty")
+    @Size(min = 1, message = "At least one teammate ID is required")
+    private List<@NotNull Long> teammatesId;
+
     @Column(name = "hidden")
+    @NotNull(message = "Hidden flag is required")
     private Boolean hidden;
+
     @Column(name = "task_total_id")
+    @NotNull(message = "Task total ID is required")
     private Long taskTotalId;
+
     @Column(name = "author_id")
+    @NotNull(message = "Author ID is required")
     private Long authorId;
 
     @Column(name = "created_at", nullable = false, updatable = false)

@@ -52,7 +52,7 @@ class TaskControllerTest {
             .project(project)
             .description("Initial task")
             .code("T-EXIST")
-            .priority(1L)
+            .priority(1)
             .statusId(1L)
             .position(0)
             .assigneesId(Collections.singletonList(123L))

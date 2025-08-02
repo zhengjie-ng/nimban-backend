@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import com.example.nimban_backend.entity.TaskColumn;
+import com.example.nimban_backend.exception.TaskColumnNotFoundException;
 import com.example.nimban_backend.repository.TaskColumnRepository;
 
 // taskColumnServiceImpl bean is a type of TaskColumnService
@@ -30,10 +31,12 @@ public class TaskColumnServiceImpl implements TaskColumnService {
     // Read One
     @Override
     public TaskColumn getTaskColumn(Long id) {
-        TaskColumn foundTaskColumn = taskColumnRepository.findById(id).get();
+        return taskColumnRepository.findById(id)
+            .orElseThrow(() -> new TaskColumnNotFoundException(id));
+    
 
         // Retrieve the taskColumn object and return
-        return foundTaskColumn;
+        // return foundTaskColumn;
     }
 
     // Read All
@@ -47,7 +50,8 @@ public class TaskColumnServiceImpl implements TaskColumnService {
     @Override
     public TaskColumn updateTaskColumn(Long id, TaskColumn taskColumn) {
         // Retrieve the taskColumn from the database
-        TaskColumn taskColumnToUpdate = taskColumnRepository.findById(id).get();
+        TaskColumn taskColumnToUpdate = taskColumnRepository.findById(id)
+            .orElseThrow(() -> new TaskColumnNotFoundException(id));
         // Update the fields of the taskColumn retrieved
         taskColumnToUpdate.setName(taskColumn.getName());
         taskColumnToUpdate.setPosition(taskColumn.getPosition());
@@ -75,6 +79,9 @@ public class TaskColumnServiceImpl implements TaskColumnService {
     // Delete
     @Override
     public void deleteTaskColumn(Long id) {
+        if (!taskColumnRepository.existsById(id)) {
+            throw new TaskColumnNotFoundException(id);
+        }
         taskColumnRepository.deleteById(id);
     }
 

@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.nimban_backend.entity.Customer;
 import com.example.nimban_backend.service.CustomerService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/customers")
 public class CustomerController {
@@ -30,7 +32,7 @@ public class CustomerController {
 
     // CREATE
     @PostMapping
-    public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
+    public ResponseEntity<Customer> createCustomer(@Valid @RequestBody Customer customer) {
         Customer newCustomer = customerService.createCustomer(customer);
         return new ResponseEntity<>(newCustomer, HttpStatus.CREATED);
     }
@@ -40,7 +42,7 @@ public class CustomerController {
     @GetMapping
     public ResponseEntity<List<Customer>> getAllCustomers(@RequestParam(required = false) String email) {
 
-        if(email != null && !email.trim().isEmpty()){
+        if (email != null && !email.trim().isEmpty()) {
             List<Customer> customers = customerService.findByEmailIgnoreCase(email);
             return new ResponseEntity<>(customers, HttpStatus.OK);
         }
@@ -54,21 +56,18 @@ public class CustomerController {
     public ResponseEntity<Customer> getCustomer(@PathVariable Long id) {
         Customer foundCustomer = customerService.getCustomer(id);
         return new ResponseEntity<>(foundCustomer, HttpStatus.OK);
-
     }
 
     // UPDATE
     @PutMapping("/{id}")
-    public ResponseEntity<Customer> updateCustomer(@PathVariable Long id, @RequestBody Customer customer) {
-
+    public ResponseEntity<Customer> updateCustomer(@PathVariable Long id, @Valid @RequestBody Customer customer) {
         Customer updatedCustomer = customerService.updateCustomer(id, customer);
         return new ResponseEntity<>(updatedCustomer, HttpStatus.OK);
-
     }
 
     // PARTIAL UPDATE
     @PatchMapping("/{id}")
-    public ResponseEntity<Customer> patchCustomer(@PathVariable Long id, @RequestBody Customer updates) {
+    public ResponseEntity<Customer> patchCustomer(@PathVariable Long id, @Valid @RequestBody Customer updates) {
         Customer patchedCustomer = customerService.patchCustomer(id, updates);
         return new ResponseEntity<>(patchedCustomer, HttpStatus.OK);
     }
@@ -78,7 +77,5 @@ public class CustomerController {
     public ResponseEntity<HttpStatus> deleteCustomer(@PathVariable Long id) {
         customerService.deleteCustomer(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-
     }
-
 }
