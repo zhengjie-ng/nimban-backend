@@ -1,6 +1,7 @@
 package com.example.nimban_backend.config;
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.stereotype.Component;
 
@@ -39,19 +40,19 @@ public class DataLoader {
 
         // Load customers data
         customerRepository.save(Customer.builder().firstName("Alan").lastName("Walker")
-                .email("alan@nimban.com").password("11111111").projectsId(Arrays.asList(1L, 2L)).birthYear(1980).birthMonth(1).birthDay(1).build());
+                .email("alan@nimban.com").password("Alan@1234").projectsId(Arrays.asList(1L, 2L)).birthYear(1980).birthMonth(1).birthDay(1).build());
         customerRepository.save(Customer.builder().firstName("Becky").lastName("Sim")
-                .email("becky@nimban.com").password("11111111").projectsId(Arrays.asList(3L)).birthYear(1980).birthMonth(1).birthDay(1).build());
+                .email("becky@nimban.com").password("Becky@1234").projectsId(Arrays.asList(3L)).birthYear(1980).birthMonth(1).birthDay(1).build());
         customerRepository.save(Customer.builder().firstName("Cindy").projectsId(Arrays.asList(4L)).lastName("Lope")
-                .email("cindy@nimban.com").password("11111111").birthYear(1980).birthMonth(1).birthDay(1).build());
+                .email("cindy@nimban.com").password("Cindy@1234").birthYear(1980).birthMonth(1).birthDay(1).build());
         customerRepository.save(Customer.builder().firstName("Danny").lastName("Smith")
-                .email("danny@nimban.com").password("11111111").projectsId(Arrays.asList(5L)).birthYear(1980).birthMonth(1).birthDay(1).build());
+                .email("danny@nimban.com").password("Danny@1234").projectsId(Arrays.asList(5L)).birthYear(1980).birthMonth(1).birthDay(1).build());
 
-        Project project1 = projectRepository.save(Project.builder().name("Monday").taskTotalId(4L).authorId(1L).build());
-        Project project2 = projectRepository.save(Project.builder().name("Tuesday").taskTotalId(1L).authorId(1L).build());
-        Project project3 = projectRepository.save(Project.builder().name("Monday").authorId(2L).build());
-        Project project4 = projectRepository.save(Project.builder().name("Friday").authorId(3L).build());
-        Project project5 = projectRepository.save(Project.builder().name("Sunday").authorId(4L).build());
+        Project project1 = projectRepository.save(Project.builder().name("Monday").taskTotalId(4L).authorId(1L).hidden(false).teammatesId(Arrays.asList(2L, 3L)).build());
+        Project project2 = projectRepository.save(Project.builder().name("Tuesday").taskTotalId(1L).authorId(1L).hidden(false).teammatesId(Arrays.asList(2L)).build());
+        Project project3 = projectRepository.save(Project.builder().name("Monday").authorId(2L).taskTotalId(2L).hidden(false).teammatesId(Arrays.asList(1L)).build());
+        Project project4 = projectRepository.save(Project.builder().name("Friday").authorId(3L).taskTotalId(3L).hidden(false).teammatesId(Arrays.asList(1L)).build());
+        Project project5 = projectRepository.save(Project.builder().name("Sunday").authorId(4L).taskTotalId(5L).hidden(false).teammatesId(Arrays.asList(1L)).build());
 
         taskColumnRepository.save(TaskColumn.builder().name("Not Started").project(project1).position(0).build());
         taskColumnRepository.save(TaskColumn.builder().name("In Progress").project(project1).position(1).build());
@@ -70,19 +71,19 @@ public class DataLoader {
         taskColumnRepository.save(TaskColumn.builder().name("Done").project(project5).position(2).build());
 
         taskRepository.save(Task.builder().name("Do laundry").project(project1).priority(1L)
-                .description("To wash all white clothes").statusId(1L).code("MON-0001").build());
+                .description("To wash all white clothes").statusId(1L).code("MON-0001").assigneesId(List.of(1L)).position(0).build());
 
         taskRepository.save(Task.builder().name("Wash dishes").project(project1).priority(2L)
-                .description("Wash with detergent").statusId(1L).code("MON-0002").build());
+                .description("Wash with detergent").statusId(1L).code("MON-0002").assigneesId(List.of(1L)).position(1).build());
                 
         taskRepository.save(Task.builder().name("Mop floor").project(project1).priority(3L)
-                .description("Mop only the living room").statusId(1L).code("MON-0003").build());
+                .description("Mop only the living room").statusId(1L).code("MON-0003").assigneesId(List.of(1L)).position(2).build());
 
         taskRepository.save(Task.builder().name("Take out trash").project(project1).priority(4L)
-                .description("Clear trash before 7pm").statusId(2L).code("MON-0004").build());
+                .description("Clear trash before 7pm").statusId(2L).code("MON-0004").assigneesId(List.of(1L)).position(3).build());
 
         taskRepository.save(Task.builder().name("Buy grocery").project(project2).priority(1L)
-                .description("Get rice, milk and bread").statusId(4L).code("TUE-0001").build());
+                .description("Get rice, milk and bread").statusId(4L).code("TUE-0001").assigneesId(List.of(1L)).position(0).build());
 
     }
 }

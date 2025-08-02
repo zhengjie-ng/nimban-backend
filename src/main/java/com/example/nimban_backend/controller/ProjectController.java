@@ -19,6 +19,8 @@ import com.example.nimban_backend.entity.Task;
 import com.example.nimban_backend.entity.TaskColumn;
 import com.example.nimban_backend.service.ProjectService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/projects")
 public class ProjectController {
@@ -31,7 +33,7 @@ public class ProjectController {
 
     // CREATE
     @PostMapping
-    public ResponseEntity<Project> createProject(@RequestBody Project project) {
+    public ResponseEntity<Project> createProject(@Valid @RequestBody Project project) {
         Project newProject = projectService.createProject(project);
         return new ResponseEntity<>(newProject, HttpStatus.CREATED);
     }
@@ -54,7 +56,7 @@ public class ProjectController {
 
     // UPDATE
     @PutMapping("/{id}")
-    public ResponseEntity<Project> updateProject(@PathVariable Long id, @RequestBody Project project) {
+    public ResponseEntity<Project> updateProject(@PathVariable Long id, @Valid @RequestBody Project project) {
 
         Project updatedProject = projectService.updateProject(id, project);
         return new ResponseEntity<>(updatedProject, HttpStatus.OK);
@@ -79,7 +81,7 @@ public class ProjectController {
     // NESTED ROUTE - add column to project
     @PostMapping("/{id}/taskColumns")
     public ResponseEntity<TaskColumn> addColumnToProject(@PathVariable Long id,
-            @RequestBody TaskColumn taskColumn) {
+        @Valid @RequestBody TaskColumn taskColumn) {
         TaskColumn newTaskColumn = projectService.addColumnToProject(id, taskColumn);
         return new ResponseEntity<>(newTaskColumn, HttpStatus.CREATED);
     }
@@ -87,7 +89,7 @@ public class ProjectController {
     // NESTED ROUTE - add task to project
     @PostMapping("/{id}/tasks")
     public ResponseEntity<Task> addTaskToProject(@PathVariable Long id,
-            @RequestBody Task task) {
+        @Valid @RequestBody Task task) {
         Task newTask = projectService.addTaskToProject(id, task);
         return new ResponseEntity<>(newTask, HttpStatus.CREATED);
     }

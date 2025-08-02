@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.validation.Valid;
+
 import com.example.nimban_backend.entity.TaskColumn;
 import com.example.nimban_backend.service.TaskColumnService;
 
@@ -29,7 +31,7 @@ public class TaskColumnController {
 
     // CREATE
     @PostMapping
-    public ResponseEntity<TaskColumn> createTaskColumn(@RequestBody TaskColumn taskColumn) {
+    public ResponseEntity<TaskColumn> createTaskColumn(@Valid @RequestBody TaskColumn taskColumn) {
         TaskColumn newTaskColumn = taskColumnService.createTaskColumn(taskColumn);
         return new ResponseEntity<>(newTaskColumn, HttpStatus.CREATED);
     }
@@ -52,7 +54,7 @@ public class TaskColumnController {
 
     // UPDATE
     @PutMapping("/{id}")
-    public ResponseEntity<TaskColumn> updateTaskColumn(@PathVariable Long id, @RequestBody TaskColumn taskColumn) {
+    public ResponseEntity<TaskColumn> updateTaskColumn(@PathVariable Long id, @Valid @RequestBody TaskColumn taskColumn) {
 
         TaskColumn updatedTaskColumn = taskColumnService.updateTaskColumn(id, taskColumn);
         return new ResponseEntity<>(updatedTaskColumn, HttpStatus.OK);

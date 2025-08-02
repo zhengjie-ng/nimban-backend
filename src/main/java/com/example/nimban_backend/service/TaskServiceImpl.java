@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import com.example.nimban_backend.entity.Task;
+import com.example.nimban_backend.exception.TaskNotFoundException;
 import com.example.nimban_backend.repository.TaskRepository;
 
 
@@ -32,10 +33,12 @@ public class TaskServiceImpl implements TaskService {
     // Read One
     @Override
     public Task getTask(Long id) {
-        Task foundTask = taskRepository.findById(id).get();
+    return taskRepository.findById(id)
+        .orElseThrow(() -> new TaskNotFoundException(id));
+    
 
         // Retrieve the task object and return
-        return foundTask;
+        // return foundTask;
     }
 
     // Read All
@@ -49,7 +52,8 @@ public class TaskServiceImpl implements TaskService {
     @Override
     public Task updateTask(Long id, Task task) {
         // Retrieve the task from the database
-        Task taskToUpdate = taskRepository.findById(id).get();
+        Task taskToUpdate = taskRepository.findById(id)
+            .orElseThrow(() -> new TaskNotFoundException(id));
         // Update the fields of the task retrieved
         taskToUpdate.setName(task.getName());
         taskToUpdate.setAssigneesId(task.getAssigneesId());

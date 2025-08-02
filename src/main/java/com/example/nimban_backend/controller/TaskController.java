@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.nimban_backend.entity.Task;
 import com.example.nimban_backend.service.TaskService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/tasks")
 public class TaskController {
@@ -29,7 +31,7 @@ public class TaskController {
 
     // CREATE
     @PostMapping
-    public ResponseEntity<Task> createTask(@RequestBody Task task) {
+    public ResponseEntity<Task> createTask(@Valid @RequestBody Task task) {
         Task newTask = taskService.createTask(task);
         return new ResponseEntity<>(newTask, HttpStatus.CREATED);
     }
@@ -52,7 +54,7 @@ public class TaskController {
 
     // UPDATE
     @PutMapping("/{id}")
-    public ResponseEntity<Task> updateTask(@PathVariable Long id, @RequestBody Task task) {
+    public ResponseEntity<Task> updateTask(@PathVariable Long id, @Valid @RequestBody Task task) {
 
         Task updatedTask = taskService.updateTask(id, task);
         return new ResponseEntity<>(updatedTask, HttpStatus.OK);
