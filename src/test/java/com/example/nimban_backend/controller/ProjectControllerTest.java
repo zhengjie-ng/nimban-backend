@@ -2,7 +2,6 @@ package com.example.nimban_backend.controller;
 
 import com.example.nimban_backend.dto.TaskRequestDto;
 import com.example.nimban_backend.entity.Project;
-// import com.example.nimban_backend.entity.TaskColumn;
 import com.example.nimban_backend.repository.ProjectRepository;
 import com.example.nimban_backend.repository.TaskColumnRepository;
 import com.example.nimban_backend.repository.TaskRepository;
@@ -11,14 +10,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.util.Collections;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -44,8 +41,10 @@ class ProjectControllerTest {
 
         existingProject = projectRepository.save(Project.builder()
             .name("Alpha")
+            .teammatesId(List.of(1001L))
             .hidden(false)
-            .teammatesId(Collections.emptyList())
+            .taskTotalId(999L)
+            .authorId(888L)
             .build());
     }
 
@@ -53,8 +52,10 @@ class ProjectControllerTest {
     void shouldCreateProject() throws Exception {
         Project project = Project.builder()
             .name("New Project")
+            .teammatesId(List.of(2001L, 2002L))
             .hidden(false)
-            .teammatesId(Collections.singletonList(101L))
+            .taskTotalId(555L)
+            .authorId(444L)
             .build();
 
         mockMvc.perform(post("/projects")
@@ -91,7 +92,7 @@ class ProjectControllerTest {
 
     @Test
     void shouldPatchProject() throws Exception {
-        String patchJson = "{\"name\": \"Patched Alpha\"}";
+        String patchJson = "{\"name\": \"Patched Alpha\", \"teammatesId\": [1001], \"hidden\": false, \"taskTotalId\": 999, \"authorId\": 888}";
 
         mockMvc.perform(patch("/projects/{id}", existingProject.getId())
                 .contentType(MediaType.APPLICATION_JSON)
@@ -117,7 +118,7 @@ class ProjectControllerTest {
         dto.setPriority(1L);
         dto.setStatusId(1L);
         dto.setPosition(0);
-        dto.setAssigneesId(Collections.singletonList(123L));
+        dto.setAssigneesId(List.of(123L));
         dto.setSortedTimeStamp("2025-07-29T15:30:00");
 
         mockMvc.perform(post("/projects/{id}/tasks", existingProject.getId())
@@ -127,17 +128,4 @@ class ProjectControllerTest {
             .andExpect(jsonPath("$.name").value("Task A"));
     }
 
-    // @Test
-    // void shouldAddColumnToProject() throws Exception {
-    //     TaskColumn column = TaskColumn.builder()
-    //         .name("To Do")
-    //         .position(1)
-    //         .build();
-
-    //     mockMvc.perform(post("/projects/{id}/columns", existingProject.getId())
-    //             .contentType(MediaType.APPLICATION_JSON)
-    //             .content(objectMapper.writeValueAsString(column)))
-    //         .andExpect(status().isCreated())
-    //         .andExpect(jsonPath("$.name").value("To Do"));
-    // }
 }
