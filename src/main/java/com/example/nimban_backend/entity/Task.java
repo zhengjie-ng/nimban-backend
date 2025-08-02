@@ -45,15 +45,18 @@ public class Task {
     private Long id;
 
     @NotBlank(message = "Task name must not be blank")
-    @Size(max = 100, message = "Task name must not exceed 100 characters")
+    // @Size(max = 100, message = "Task name must not exceed 100 characters")
+    @Size(min = 3, max = 30, message = "Task name must be between 3 and 30 characters")
     @Column(name = "name")
     private String name;
 
-    @Transient
-    @Size(min = 1, message = "There must be at least one assignee")
-    private List<@NotNull(message = "Assignee ID cannot be null") Long> assigneesId;
+    // @Transient
+    // @Size(min = 1, message = "There must be at least one assignee")
+    // private List<@NotNull(message = "Assignee ID cannot be null") Long> assigneesId;
+    @Column(name = "assignees_Id")
+    private List<Long> assigneesId;
 
-    @Size(max = 50, message = "Code must not exceed 50 characters")
+    @Size(max = 50, message = "Code must not exceed 10 characters")
     @Column(name = "code")
     private String code;
 
@@ -61,14 +64,14 @@ public class Task {
     @Max(value = 5, message = "Priority cannot be greater than 5")
     @NotNull(message = "Priority must not be null")
     @Column(name = "priority")
-    private Long priority;
+    private Integer priority;
 
     @Min(value = 1, message = "Status ID must be positive")
     @NotNull(message = "Status ID must not be null")
     @Column(name = "status_id")
     private Long statusId;
 
-    @Size(max = 255, message = "Description must not exceed 255 characters")
+    // @Size(max = 255, message = "Description must not exceed 255 characters")
     @Column(name = "description")
     private String description;
 
@@ -104,7 +107,7 @@ public class Task {
 
     
 
-    @NotNull(message = "Project must not be null")
+    // @NotNull(message = "Project must not be null")
     @JsonBackReference
     @ManyToOne(optional = false)
     @JoinColumn(name = "project_id", referencedColumnName = "id")
