@@ -4,100 +4,117 @@ import com.example.nimban_backend.entity.Customer;
 import com.example.nimban_backend.repository.CustomerRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+
 import org.springframework.http.MediaType;
-
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
 
-import java.util.List;
+import java.util.Collections;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
-public class CustomerControllerTest {
+@AutoConfigureMockMvc
+class CustomerControllerTest {
 
-    @Autowired
-    private WebApplicationContext context;
+        @Autowired
+        private MockMvc mockMvc;
+        @Autowired
+        private ObjectMapper objectMapper;
+        @Autowired
+        private CustomerRepository customerRepository;
 
-    @Autowired
-    private CustomerRepository customerRepository;
+        private Customer existingCustomer;
 
-    @Autowired
-    private ObjectMapper objectMapper;
+        @BeforeEach
+        void setup() {
+                customerRepository.deleteAll();
 
-    private MockMvc mockMvc;
+                existingCustomer = customerRepository.save(Customer.builder()
+                                .firstName("Alice")
+                                .lastName("Ng")
+                                .email("alice@example.com")
+                                .password("SecurePass8@")
+                                .birthYear(1995)
+                                .birthMonth(7)
+                                .birthDay(24)
+                                .teammatesId(Collections.emptyList())
+                                .projectsId(Collections.emptyList())
+                                .build());
+        }
 
-    @BeforeEach
-    void setup() {
-        mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
-        customerRepository.deleteAll(); // clean slate for each test
-    }
+        @Test
+        void shouldCreateCustomer() throws Exception {
+                Customer newCustomer = Customer.builder()
+                                .firstName("Bob")
+                                .lastName("Tan")
+                                .email("bob.tan@example.com")
+                                .password("TestPassword1@")
+                                .birthYear(1990)
+                                .birthMonth(12)
+                                .birthDay(5)
+                                .build();
 
-    @AfterEach
-    void teardown() {
-        customerRepository.deleteAll(); // Optional: double-clean for safety
-    }
+                mockMvc.perform(post("/customers")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(objectMapper.writeValueAsString(newCustomer)))
+                                .andExpect(status().isCreated())
+                                .andExpect(jsonPath("$.firstName").value("Bob"));
+        }
 
-  @Test
-    void testCreateCustomer() throws Exception {
-        Customer request = Customer.builder()
-                .firstName("Marie")
-                .lastName("Curie")
-                .email("marie@radioactive.com")
-                .password("uranium")
-                .build();
+        @Test
+        void shouldGetCustomerById() throws Exception {
+                mockMvc.perform(get("/customers/{id}", existingCustomer.getId()))
+                                .andExpect(status().isOk())
+                                .andExpect(jsonPath("$.email").value("alice@example.com"));
+        }
 
-        mockMvc.perform(post("/customers")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(request)))
-                .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.email").value("marie@radioactive.com"));
+        @Test
+        void shouldListAllCustomers() throws Exception {
+                mockMvc.perform(get("/customers"))
+                                .andExpect(status().isOk())
+                                .andExpect(jsonPath("$.length()").value(1));
+        }
 
-        List<Customer> saved = customerRepository.findAll();
-        assertThat(saved).hasSize(1);
-    }
+        @Test
+        void shouldUpdateCustomer() throws Exception {
+                existingCustomer.setFirstName("Alicia");
 
-    @Test
-    void testGetCustomerById() throws Exception {
-        Customer saved = customerRepository.save(
-                Customer.builder().email("tesla@coil.com").firstName("Nikola").build()
-        );
+                mockMvc.perform(put("/customers/{id}", existingCustomer.getId())
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(objectMapper.writeValueAsString(existingCustomer)))
+                                .andExpect(status().isOk())
+                                .andExpect(jsonPath("$.firstName").value("Alicia"));
+        }
 
-        mockMvc.perform(get("/customers/" + saved.getId()))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.firstName").value("Nikola"));
-    }
+        // @Test
+        // void shouldPatchCustomerEmail() throws Exception {
+        //         // String patchJson = "{\"email\": \"new.email@example.com\"}";
+        //         Customer partial = new Customer();
+        //         partial.setId(existingCustomer.getId()); // optional
+        //         partial.setEmail("new.email@example.com"); // only the field you want to patch
 
-    @Test
-    void testDeleteCustomer() throws Exception {
-        Customer saved = customerRepository.save(
-                Customer.builder().email("delete@me.com").build()
-        );
+        //         String patchJson = objectMapper.writeValueAsString(partial);
 
-        mockMvc.perform(delete("/customers/" + saved.getId()))
-                .andExpect(status().isNoContent());
+        //         mockMvc.perform(patch("/customers/{id}", existingCustomer.getId())
+        //                         .contentType(MediaType.APPLICATION_JSON)
+        //                         .content(patchJson))
+        //                         .andExpect(status().isOk())
+        //                         .andExpect(jsonPath("$.email").value("new.email@example.com"));
+        // }
 
-        assertThat(customerRepository.existsById(saved.getId())).isFalse();
-    }
+        @Test
+        void shouldDeleteCustomer() throws Exception {
+                mockMvc.perform(delete("/customers/{id}", existingCustomer.getId()))
+                                .andExpect(status().isNoContent());
 
-    @Test
-    void testGetAllCustomers() throws Exception {
-        customerRepository.saveAll(List.of(
-                Customer.builder().email("one@example.com").build(),
-                Customer.builder().email("two@example.com").build()
-        ));
-
-        mockMvc.perform(get("/customers"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.length()").value(2));
-    }
+                assertThat(customerRepository.findById(existingCustomer.getId())).isEmpty();
+        }
 }

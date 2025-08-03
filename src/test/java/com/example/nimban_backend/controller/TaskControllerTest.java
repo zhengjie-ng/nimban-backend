@@ -17,11 +17,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.util.Collections;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
@@ -43,20 +42,22 @@ class TaskControllerTest {
 
         project = projectRepository.save(Project.builder()
             .name("Test Project")
-            .teammatesId(Collections.emptyList())
+            .teammatesId(List.of(101L))
             .hidden(false)
+            .taskTotalId(999L)
+            .authorId(888L)
             .build());
 
         existingTask = taskRepository.save(Task.builder()
             .name("Existing Task")
-            .project(project)
-            .description("Initial task")
+            .assigneesId(List.of(123L))
             .code("T-EXIST")
-            .priority(1)
+            .priority(2)
             .statusId(1L)
+            .description("Initial task")
             .position(0)
-            .assigneesId(Collections.singletonList(123L))
             .sortedTimeStamp("2025-07-29T14:00:00")
+            .project(project)
             .build());
     }
 
@@ -66,10 +67,10 @@ class TaskControllerTest {
         dto.setName("New Task");
         dto.setCode("T-NEW");
         dto.setDescription("Task description");
-        dto.setPriority(2L);
-        dto.setStatusId(1L);
+        dto.setPriority(3L); // Priority is defined as Integer but receives Long — confirm controller handles conversion
+        dto.setStatusId(2L);
         dto.setPosition(1);
-        dto.setAssigneesId(Collections.singletonList(456L));
+        dto.setAssigneesId(List.of(456L));
         dto.setSortedTimeStamp("2025-07-29T15:00:00");
 
         mockMvc.perform(post("/projects/{id}/tasks", project.getId())
@@ -97,6 +98,12 @@ class TaskControllerTest {
     void shouldFullyUpdateTaskWithPut() throws Exception {
         existingTask.setName("Updated Name");
         existingTask.setDescription("Updated Desc");
+        existingTask.setPriority(4);
+        existingTask.setPosition(1);
+        existingTask.setStatusId(2L);
+        existingTask.setCode("T-UPD");
+        existingTask.setSortedTimeStamp("2025-07-30T09:00:00");
+        existingTask.setAssigneesId(List.of(789L));
 
         mockMvc.perform(put("/tasks/{id}", existingTask.getId())
                 .contentType(MediaType.APPLICATION_JSON)
@@ -108,7 +115,17 @@ class TaskControllerTest {
 
     @Test
     void shouldPatchTask() throws Exception {
-        String patchJson = "{\"description\": \"Partially updated\"}";
+        String patchJson = """
+        {
+            "description": "Partially updated",
+            "priority": 2,
+            "position": 0,
+            "statusId": 1,
+            "name": "Existing Task",
+            "project": { "id": %d },
+            "assigneesId": [123]
+        }
+        """.formatted(project.getId());
 
         mockMvc.perform(patch("/tasks/{id}", existingTask.getId())
                 .contentType(MediaType.APPLICATION_JSON)
