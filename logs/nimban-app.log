@@ -266,3 +266,459 @@
 2025-08-05T11:57:42.682+08:00  INFO 3519 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-08-05T11:57:42.691+08:00  INFO 3519 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-08-05T11:57:42.715+08:00  INFO 3519 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-05T15:15:50.390+08:00  INFO 3512 --- [nimban-backend] [restartedMain] c.e.n.NimbanBackendApplication           : Starting NimbanBackendApplication using Java 17.0.15 with PID 3512 (/home/leonicus/practice/nimban-backend/target/classes started by leonicus in /home/leonicus/practice/nimban-backend)
+2025-08-05T15:15:50.392+08:00  INFO 3512 --- [nimban-backend] [restartedMain] c.e.n.NimbanBackendApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T15:15:50.475+08:00  INFO 3512 --- [nimban-backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-05T15:15:50.476+08:00  INFO 3512 --- [nimban-backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-05T15:15:51.127+08:00  INFO 3512 --- [nimban-backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T15:15:51.192+08:00  INFO 3512 --- [nimban-backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+2025-08-05T15:15:51.661+08:00  INFO 3512 --- [nimban-backend] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-05T15:15:51.676+08:00  INFO 3512 --- [nimban-backend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-05T15:15:51.677+08:00  INFO 3512 --- [nimban-backend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-05T15:15:51.713+08:00  INFO 3512 --- [nimban-backend] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-05T15:15:51.714+08:00  INFO 3512 --- [nimban-backend] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1237 ms
+2025-08-05T15:15:51.869+08:00  INFO 3512 --- [nimban-backend] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T15:15:51.914+08:00  INFO 3512 --- [nimban-backend] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-08-05T15:15:51.940+08:00  INFO 3512 --- [nimban-backend] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T15:15:52.250+08:00  INFO 3512 --- [nimban-backend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T15:15:52.276+08:00  INFO 3512 --- [nimban-backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-05T15:15:52.565+08:00  INFO 3512 --- [nimban-backend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@26dd5dfd
+2025-08-05T15:15:52.568+08:00  INFO 3512 --- [nimban-backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-05T15:15:52.630+08:00  WARN 3512 --- [nimban-backend] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T15:15:52.668+08:00  INFO 3512 --- [nimban-backend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.18
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T15:15:53.632+08:00  INFO 3512 --- [nimban-backend] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T15:15:53.824+08:00  INFO 3512 --- [nimban-backend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T15:15:54.503+08:00  WARN 3512 --- [nimban-backend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T15:15:54.846+08:00  INFO 3512 --- [nimban-backend] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-05T15:15:54.878+08:00  INFO 3512 --- [nimban-backend] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-05T15:15:54.888+08:00  INFO 3512 --- [nimban-backend] [restartedMain] c.e.n.NimbanBackendApplication           : Started NimbanBackendApplication in 4.877 seconds (process running for 5.189)
+2025-08-05T15:15:59.998+08:00  INFO 3512 --- [nimban-backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-05T15:15:59.998+08:00  INFO 3512 --- [nimban-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-05T15:16:00.002+08:00  INFO 3512 --- [nimban-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-08-05T15:16:00.103+08:00 ERROR 3512 --- [nimban-backend] [http-nio-8080-exec-1] c.e.n.exception.GlobalExceptionHandler   : 🔴 Unhandled exception occurred: No static resource .
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.42.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.42.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-08-05T15:16:00.304+08:00  WARN 3512 --- [nimban-backend] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .]
+2025-08-05T15:16:00.471+08:00 ERROR 3512 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.exception.GlobalExceptionHandler   : 🔴 Unhandled exception occurred: No static resource favicon.ico.
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.42.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.42.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-08-05T15:16:00.489+08:00  WARN 3512 --- [nimban-backend] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-08-05T15:16:05.248+08:00  INFO 3512 --- [nimban-backend] [http-nio-8080-exec-4] c.e.n.controller.CustomerController      : 🟢 2025-08-05 15:16:05.248860224 GET Customers Success
+2025-08-05T15:16:05.328+08:00 ERROR 3512 --- [nimban-backend] [http-nio-8080-exec-5] c.e.n.exception.GlobalExceptionHandler   : 🔴 Unhandled exception occurred: No static resource favicon.ico.
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.42.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.42.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-08-05T15:16:05.335+08:00  WARN 3512 --- [nimban-backend] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-08-05T15:16:38.217+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.e.GlobalExceptionHandlerTest       : Starting GlobalExceptionHandlerTest using Java 17.0.15 with PID 4160 (started by leonicus in /home/leonicus/practice/nimban-backend)
+2025-08-05T15:16:38.221+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.e.GlobalExceptionHandlerTest       : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T15:16:39.256+08:00  INFO 4160 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T15:16:39.396+08:00  INFO 4160 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 4 JPA repository interfaces.
+2025-08-05T15:16:40.060+08:00  INFO 4160 --- [nimban-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T15:16:40.127+08:00  INFO 4160 --- [nimban-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-08-05T15:16:40.170+08:00  INFO 4160 --- [nimban-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T15:16:40.556+08:00  INFO 4160 --- [nimban-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T15:16:40.609+08:00  INFO 4160 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-05T15:16:41.035+08:00  INFO 4160 --- [nimban-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@336e3be2
+2025-08-05T15:16:41.038+08:00  INFO 4160 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-05T15:16:41.076+08:00  WARN 4160 --- [nimban-backend] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T15:16:41.110+08:00  INFO 4160 --- [nimban-backend] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.18
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T15:16:42.558+08:00  INFO 4160 --- [nimban-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T15:16:42.689+08:00  INFO 4160 --- [nimban-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T15:16:43.721+08:00  WARN 4160 --- [nimban-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T15:16:44.330+08:00  INFO 4160 --- [nimban-backend] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-05T15:16:44.332+08:00  INFO 4160 --- [nimban-backend] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-05T15:16:44.336+08:00  INFO 4160 --- [nimban-backend] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-08-05T15:16:44.385+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.e.GlobalExceptionHandlerTest       : Started GlobalExceptionHandlerTest in 6.715 seconds (process running for 8.443)
+2025-08-05T15:16:44.957+08:00 ERROR 4160 --- [nimban-backend] [main] c.e.n.exception.GlobalExceptionHandler   : 🔴 Unhandled exception occurred: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "crash"
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "crash"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:301) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:136) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.42.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-6.2.8.jar:6.2.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.42.jar:6.0]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165) ~[spring-test-6.2.8.jar:6.2.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:162) ~[spring-test-6.2.8.jar:6.2.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:162) ~[spring-test-6.2.8.jar:6.2.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:162) ~[spring-test-6.2.8.jar:6.2.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.2.8.jar:6.2.8]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201) ~[spring-test-6.2.8.jar:6.2.8]
+	at com.example.nimban_backend.exception.GlobalExceptionHandlerTest.shouldHandleUnexpectedException(GlobalExceptionHandlerTest.java:63) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775) ~[junit-platform-commons-1.12.2.jar:1.12.2]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479) ~[junit-platform-commons-1.12.2.jar:1.12.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.12.2.jar:5.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:94) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:52) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:47) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:46) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:52) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:70) ~[junit-platform-launcher-1.12.2.jar:1.12.2]
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:100) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:520) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:748) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:443) ~[.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211) ~[.cp/:na]
+Caused by: java.lang.NumberFormatException: For input string: "crash"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:711) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1163) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:204) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-6.2.8.jar:6.2.8]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:439) ~[spring-beans-6.2.8.jar:6.2.8]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:412) ~[spring-beans-6.2.8.jar:6.2.8]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:161) ~[spring-beans-6.2.8.jar:6.2.8]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:80) ~[spring-beans-6.2.8.jar:6.2.8]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53) ~[spring-beans-6.2.8.jar:6.2.8]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:867) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:293) ~[spring-web-6.2.8.jar:6.2.8]
+	... 107 common frames omitted
+
+2025-08-05T15:16:45.230+08:00  WARN 4160 --- [nimban-backend] [main] c.e.n.e.CustomerNotFoundException        : 🔴 CustomerNotFoundException triggered for ID: 9999
+2025-08-05T15:16:45.358+08:00  WARN 4160 --- [nimban-backend] [main] c.e.n.exception.GlobalExceptionHandler   : 🔴 Validation failed: Last name is required. Email should be valid. Password must include upper and lower case letters, a number, and a special character. Password must be at least 8 characters. First name is required. | Total errors: 5
+2025-08-05T15:16:45.389+08:00  INFO 4160 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.exception.TaskNotFoundExceptionTest]: TaskNotFoundExceptionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T15:16:45.397+08:00  INFO 4160 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.exception.TaskNotFoundExceptionTest
+2025-08-05T15:16:45.423+08:00  WARN 4160 --- [nimban-backend] [main] c.e.n.exception.TaskNotFoundException    : 🔴 TaskNotFoundException triggered for ID: 4242
+2025-08-05T15:16:45.441+08:00  INFO 4160 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.exception.TaskColumnNestedNotFoundTest]: TaskColumnNestedNotFoundTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T15:16:45.446+08:00  INFO 4160 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.exception.TaskColumnNestedNotFoundTest
+2025-08-05T15:16:45.736+08:00  WARN 4160 --- [nimban-backend] [main] c.e.n.e.TaskColumnNotFoundException      : 🔴 TaskColumnNotFoundException triggered for ID: 8888
+2025-08-05T15:16:45.747+08:00  INFO 4160 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.exception.CustomerExceptionHandlingTest]: CustomerExceptionHandlingTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T15:16:45.751+08:00  INFO 4160 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.exception.CustomerExceptionHandlingTest
+2025-08-05T15:16:45.765+08:00  WARN 4160 --- [nimban-backend] [main] c.e.n.e.CustomerNotFoundException        : 🔴 CustomerNotFoundException triggered for ID: 9999
+2025-08-05T15:16:45.784+08:00  INFO 4160 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.exception.ProjectNotFoundExceptionTest]: ProjectNotFoundExceptionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T15:16:45.789+08:00  INFO 4160 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.exception.ProjectNotFoundExceptionTest
+2025-08-05T15:16:45.803+08:00  WARN 4160 --- [nimban-backend] [main] c.e.n.e.ProjectNotFoundException         : 🔴 ProjectNotFoundException triggered for ID: 9999
+2025-08-05T15:16:45.899+08:00  INFO 4160 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.NimbanBackendApplicationTests]: NimbanBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T15:16:45.912+08:00  INFO 4160 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.NimbanBackendApplicationTests
+2025-08-05T15:16:45.916+08:00  INFO 4160 --- [nimban-backend] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-08-05T15:16:45.945+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.NimbanBackendApplicationTests      : Starting NimbanBackendApplicationTests using Java 17.0.15 with PID 4160 (started by leonicus in /home/leonicus/practice/nimban-backend)
+2025-08-05T15:16:45.946+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.NimbanBackendApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T15:16:46.169+08:00  INFO 4160 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T15:16:46.198+08:00  INFO 4160 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 4 JPA repository interfaces.
+2025-08-05T15:16:46.313+08:00  INFO 4160 --- [nimban-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T15:16:46.316+08:00  INFO 4160 --- [nimban-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T15:16:46.334+08:00  INFO 4160 --- [nimban-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T15:16:46.335+08:00  INFO 4160 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-08-05T15:16:46.365+08:00  INFO 4160 --- [nimban-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@770635f8
+2025-08-05T15:16:46.366+08:00  INFO 4160 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-08-05T15:16:46.376+08:00  WARN 4160 --- [nimban-backend] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T15:16:46.380+08:00  INFO 4160 --- [nimban-backend] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 14.18
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T15:16:46.491+08:00  INFO 4160 --- [nimban-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T15:16:46.606+08:00  INFO 4160 --- [nimban-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T15:16:46.971+08:00  WARN 4160 --- [nimban-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T15:16:47.118+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.NimbanBackendApplicationTests      : Started NimbanBackendApplicationTests in 1.201 seconds (process running for 11.176)
+2025-08-05T15:16:47.208+08:00  INFO 4160 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.validation.CustomerValidationTestSP]: CustomerValidationTestSP does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T15:16:47.221+08:00  INFO 4160 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.validation.CustomerValidationTestSP
+2025-08-05T15:16:47.237+08:00  WARN 4160 --- [nimban-backend] [main] c.e.n.exception.GlobalExceptionHandler   : 🔴 Validation failed: Last name is required. Password must include upper and lower case letters, a number, and a special character. Password must be at least 8 characters. Email should be valid. First name is required. | Total errors: 5
+2025-08-05T15:16:47.391+08:00  INFO 4160 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.controller.CustomerControllerTest]: CustomerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T15:16:47.404+08:00  INFO 4160 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.controller.CustomerControllerTest
+2025-08-05T15:16:47.488+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🟢 2025-08-05 15:16:47.488374661 PUT Customer/5 Success
+2025-08-05T15:16:47.578+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🟢 2025-08-05 15:16:47.578081435 POST Customer Success
+2025-08-05T15:16:47.618+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🟢 2025-08-05 15:16:47.618511319 GET Customer/8 Success
+2025-08-05T15:16:48.119+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🟢 2025-08-05 15:16:48.119799442 DELETE Customer/9 Success
+2025-08-05T15:16:48.162+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🟢 2025-08-05 15:16:48.162099255 GET Customers Success
+2025-08-05T15:16:48.185+08:00  INFO 4160 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.controller.TaskColumnControllerTest]: TaskColumnControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T15:16:48.189+08:00  INFO 4160 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.controller.TaskColumnControllerTest
+2025-08-05T15:16:48.325+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.TaskColumnController    : 🟢 2025-08-05 15:16:48.325211100 PUT TaskColumn/16 Success
+2025-08-05T15:16:48.379+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.TaskColumnController    : 🟢 2025-08-05 15:16:48.379436477 PATCH TaskColumn/17 Success
+2025-08-05T15:16:48.434+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.TaskColumnController    : 🟢 2025-08-05 15:16:48.434639994 POST TaskColumn Success
+2025-08-05T15:16:48.487+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.TaskColumnController    : 🟢 2025-08-05 15:16:48.486994363 GET TaskColumn/20 Success
+2025-08-05T15:16:48.546+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.TaskColumnController    : 🟢 2025-08-05 15:16:48.546669900 DELETE TaskColumn/21 Success
+2025-08-05T15:16:48.587+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.TaskColumnController    : 🟢 2025-08-05 15:16:48.587973472 GET TaskColumns Success
+2025-08-05T15:16:48.596+08:00  INFO 4160 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.controller.ProjectControllerTest]: ProjectControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T15:16:48.600+08:00  INFO 4160 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.controller.ProjectControllerTest
+2025-08-05T15:16:48.647+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 15:16:48.647801254 DELETE Project/13 Success
+2025-08-05T15:16:48.706+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 15:16:48.706136882 PUT Project/14 Success
+2025-08-05T15:16:48.762+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 15:16:48.762568180 PATCH Project/15 Success
+2025-08-05T15:16:48.802+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 15:16:48.802645452 GET Projects Success
+2025-08-05T15:16:48.849+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 15:16:48.849960973 POST Project Success
+2025-08-05T15:16:48.927+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 15:16:48.927843894 POST Project/19/tasks Success
+2025-08-05T15:16:48.983+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 15:16:48.983798491 GET Project/20 Success
+2025-08-05T15:16:48.999+08:00  INFO 4160 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.controller.TaskControllerTest]: TaskControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T15:16:49.003+08:00  INFO 4160 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.controller.TaskControllerTest
+2025-08-05T15:16:49.057+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.TaskController          : 🟢 2025-08-05 15:16:49.057155374 PATCH Task/7 Success
+2025-08-05T15:16:49.118+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 15:16:49.118802679 POST Project/22/tasks Success
+2025-08-05T15:16:49.174+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.TaskController          : 🟢 2025-08-05 15:16:49.174045492 DELETE Task/10 Success
+2025-08-05T15:16:49.221+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.TaskController          : 🟢 2025-08-05 15:16:49.221438027 GET Tasks Success
+2025-08-05T15:16:49.271+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.TaskController          : 🟢 2025-08-05 15:16:49.271744779 PUT Task/12 Success
+2025-08-05T15:16:49.316+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.TaskController          : 🟢 2025-08-05 15:16:49.316085416 GET Task/13 Success
+2025-08-05T15:16:49.324+08:00  INFO 4160 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.controller.CustomerPatchEmailTest]: CustomerPatchEmailTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T15:16:49.328+08:00  INFO 4160 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.controller.CustomerPatchEmailTest
+2025-08-05T15:16:49.333+08:00  INFO 4160 --- [nimban-backend] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-08-05T15:16:49.359+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.CustomerPatchEmailTest  : Starting CustomerPatchEmailTest using Java 17.0.15 with PID 4160 (started by leonicus in /home/leonicus/practice/nimban-backend)
+2025-08-05T15:16:49.360+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.CustomerPatchEmailTest  : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T15:16:49.589+08:00  INFO 4160 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T15:16:49.605+08:00  INFO 4160 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.
+2025-08-05T15:16:49.730+08:00  INFO 4160 --- [nimban-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T15:16:49.731+08:00  INFO 4160 --- [nimban-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T15:16:49.740+08:00  INFO 4160 --- [nimban-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T15:16:49.741+08:00  INFO 4160 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-08-05T15:16:49.766+08:00  INFO 4160 --- [nimban-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@2900553d
+2025-08-05T15:16:49.766+08:00  INFO 4160 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-08-05T15:16:49.774+08:00  WARN 4160 --- [nimban-backend] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T15:16:49.777+08:00  INFO 4160 --- [nimban-backend] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 14.18
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T15:16:49.841+08:00  INFO 4160 --- [nimban-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T15:16:49.942+08:00  INFO 4160 --- [nimban-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T15:16:50.226+08:00  WARN 4160 --- [nimban-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T15:16:50.331+08:00  INFO 4160 --- [nimban-backend] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-05T15:16:50.331+08:00  INFO 4160 --- [nimban-backend] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-05T15:16:50.333+08:00  INFO 4160 --- [nimban-backend] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-08-05T15:16:50.345+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.CustomerPatchEmailTest  : Started CustomerPatchEmailTest in 1.012 seconds (process running for 14.403)
+2025-08-05T15:16:50.404+08:00  INFO 4160 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🟢 2025-08-05 15:16:50.404961199 PATCH Customer/5 Success
+2025-08-05T15:16:51.238+08:00  WARN 4160 --- [nimban-backend] [main] c.e.n.e.ProjectNotFoundException         : 🔴 ProjectNotFoundException triggered for ID: 1
+2025-08-05T15:16:51.330+08:00  WARN 4160 --- [nimban-backend] [main] c.e.n.exception.TaskNotFoundException    : 🔴 TaskNotFoundException triggered for ID: 2
+2025-08-05T15:16:51.358+08:00  INFO 4160 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.service.CustomerServiceTest]: CustomerServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T15:16:51.412+08:00  INFO 4160 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.service.CustomerServiceTest
+2025-08-05T15:16:51.533+08:00  WARN 4160 --- [nimban-backend] [main] c.e.n.e.CustomerNotFoundException        : 🔴 CustomerNotFoundException triggered for ID: 8888
+2025-08-05T15:16:51.611+08:00  WARN 4160 --- [nimban-backend] [main] c.e.n.e.CustomerNotFoundException        : 🔴 CustomerNotFoundException triggered for ID: 9
+2025-08-05T15:16:51.660+08:00  INFO 4160 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T15:16:51.665+08:00  INFO 4160 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-05T15:16:51.687+08:00  INFO 4160 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-05T15:16:51.694+08:00  INFO 4160 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T15:16:51.695+08:00  INFO 4160 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-08-05T15:16:51.709+08:00  INFO 4160 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-08-05T15:16:51.715+08:00  INFO 4160 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T15:16:51.717+08:00  INFO 4160 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-08-05T15:16:51.730+08:00  INFO 4160 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-08-05T15:17:49.314+08:00  INFO 3512 --- [nimban-backend] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05T15:17:49.337+08:00  INFO 3512 --- [nimban-backend] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-05T15:17:49.352+08:00  INFO 3512 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T15:17:49.363+08:00  INFO 3512 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-05T15:17:49.376+08:00  INFO 3512 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
