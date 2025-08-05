@@ -1,23 +1,16 @@
-2025-08-03T15:37:27.192+08:00  INFO 7532 --- [nimban-backend] [restartedMain] c.e.n.NimbanBackendApplication           : Starting NimbanBackendApplication using Java 17.0.15 with PID 7532 (/home/leonicus/practice/nimban-backend/target/classes started by leonicus in /home/leonicus/practice/nimban-backend)
-2025-08-03T15:37:27.195+08:00  INFO 7532 --- [nimban-backend] [restartedMain] c.e.n.NimbanBackendApplication           : No active profile set, falling back to 1 default profile: "default"
-2025-08-03T15:37:27.251+08:00  INFO 7532 --- [nimban-backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-08-03T15:37:27.252+08:00  INFO 7532 --- [nimban-backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-08-03T15:37:27.872+08:00  INFO 7532 --- [nimban-backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-08-03T15:37:27.948+08:00  INFO 7532 --- [nimban-backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 4 JPA repository interfaces.
-2025-08-03T15:37:28.383+08:00  INFO 7532 --- [nimban-backend] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-08-03T15:37:28.395+08:00  INFO 7532 --- [nimban-backend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-08-03T15:37:28.395+08:00  INFO 7532 --- [nimban-backend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-08-03T15:37:28.427+08:00  INFO 7532 --- [nimban-backend] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-08-03T15:37:28.427+08:00  INFO 7532 --- [nimban-backend] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1175 ms
-2025-08-03T15:37:28.565+08:00  INFO 7532 --- [nimban-backend] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-08-03T15:37:28.600+08:00  INFO 7532 --- [nimban-backend] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-08-03T15:37:28.626+08:00  INFO 7532 --- [nimban-backend] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-08-03T15:37:28.954+08:00  INFO 7532 --- [nimban-backend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-08-03T15:37:28.975+08:00  INFO 7532 --- [nimban-backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-08-03T15:37:29.246+08:00  INFO 7532 --- [nimban-backend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1ad1ab64
-2025-08-03T15:37:29.251+08:00  INFO 7532 --- [nimban-backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-08-03T15:37:29.309+08:00  WARN 7532 --- [nimban-backend] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-08-03T15:37:29.336+08:00  INFO 7532 --- [nimban-backend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-08-05T10:08:10.191+08:00  INFO 5551 --- [nimban-backend] [main] c.e.n.service.CustomerServiceTest        : Starting CustomerServiceTest using Java 17.0.15 with PID 5551 (started by leonicus in /home/leonicus/practice/nimban-backend)
+2025-08-05T10:08:10.202+08:00  INFO 5551 --- [nimban-backend] [main] c.e.n.service.CustomerServiceTest        : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T10:08:11.101+08:00  INFO 5551 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T10:08:11.212+08:00  INFO 5551 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 4 JPA repository interfaces.
+2025-08-05T10:08:11.804+08:00  INFO 5551 --- [nimban-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T10:08:11.876+08:00  INFO 5551 --- [nimban-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-08-05T10:08:11.937+08:00  INFO 5551 --- [nimban-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T10:08:12.386+08:00  INFO 5551 --- [nimban-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T10:08:12.414+08:00  INFO 5551 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-05T10:08:12.778+08:00  INFO 5551 --- [nimban-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@40b31a16
+2025-08-05T10:08:12.781+08:00  INFO 5551 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-05T10:08:12.843+08:00  WARN 5551 --- [nimban-backend] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T10:08:12.878+08:00  INFO 5551 --- [nimban-backend] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 14.18
@@ -25,27 +18,10 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-08-03T15:37:30.209+08:00  INFO 7532 --- [nimban-backend] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-03T15:37:30.377+08:00  INFO 7532 --- [nimban-backend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-03T15:37:30.968+08:00  WARN 7532 --- [nimban-backend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-03T15:37:31.262+08:00  INFO 7532 --- [nimban-backend] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-08-03T15:37:31.293+08:00  INFO 7532 --- [nimban-backend] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-08-03T15:37:31.307+08:00  INFO 7532 --- [nimban-backend] [restartedMain] c.e.n.NimbanBackendApplication           : Started NimbanBackendApplication in 4.556 seconds (process running for 4.901)
-2025-08-03T15:37:35.505+08:00  INFO 7532 --- [nimban-backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-03T15:37:35.506+08:00  INFO 7532 --- [nimban-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-08-03T15:37:35.511+08:00  INFO 7532 --- [nimban-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-08-03T15:37:35.640+08:00  WARN 7532 --- [nimban-backend] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .]
-2025-08-03T15:37:35.794+08:00  WARN 7532 --- [nimban-backend] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2025-08-03T15:37:40.849+08:00  INFO 7532 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.CustomerController      : 🟢 2025-08-03 15:37:40.849829279 GET Customers Success
-2025-08-03T15:37:40.920+08:00  WARN 7532 --- [nimban-backend] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
-2025-08-03T15:37:48.095+08:00  INFO 7532 --- [nimban-backend] [http-nio-8080-exec-6] c.e.n.controller.CustomerController      : 🟢 2025-08-03 15:37:48.095713054 GET Customers Success
-2025-08-03T15:38:06.114+08:00  INFO 7532 --- [nimban-backend] [http-nio-8080-exec-8] c.e.n.controller.CustomerController      : 🟢 2025-08-03 15:38:06.114371971 GET Project/1 Success
-2025-08-03T15:38:12.960+08:00 ERROR 7532 --- [nimban-backend] [http-nio-8080-exec-9] c.e.n.controller.CustomerController      : 🔴 2025-08-03 15:38:12.960243444 GET Project/999 Error 404 Exception Customer with ID 999 not found.
-2025-08-03T15:38:34.765+08:00  INFO 7532 --- [nimban-backend] [http-nio-8080-exec-10] c.e.n.controller.ProjectController       : 🟢 2025-08-03 15:38:34.765836155 GET Projects Success
-2025-08-03T15:38:41.660+08:00  INFO 7532 --- [nimban-backend] [http-nio-8080-exec-1] c.e.n.controller.ProjectController       : 🟢 2025-08-03 15:38:41.660484256 GET Project/1 Success
-2025-08-03T15:38:45.912+08:00 ERROR 7532 --- [nimban-backend] [http-nio-8080-exec-2] c.e.n.controller.ProjectController       : 🔴 2025-08-03 15:38:45.912240581 GET Project/999 Error Exception Project not found with ID: 999
-2025-08-03T15:38:55.970+08:00  INFO 7532 --- [nimban-backend] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-03T15:38:55.974+08:00  INFO 7532 --- [nimban-backend] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-08-03T15:38:55.981+08:00  INFO 7532 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-03T15:38:55.990+08:00  INFO 7532 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-08-03T15:38:56.006+08:00  INFO 7532 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-05T10:08:14.030+08:00  INFO 5551 --- [nimban-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T10:08:14.223+08:00  INFO 5551 --- [nimban-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T10:08:15.211+08:00  WARN 5551 --- [nimban-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T10:08:15.700+08:00  INFO 5551 --- [nimban-backend] [main] c.e.n.service.CustomerServiceTest        : Started CustomerServiceTest in 5.975 seconds (process running for 7.185)
+2025-08-05T10:08:17.526+08:00  INFO 5551 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T10:08:17.535+08:00  INFO 5551 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-05T10:08:17.557+08:00  INFO 5551 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
