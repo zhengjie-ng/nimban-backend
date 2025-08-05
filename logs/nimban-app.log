@@ -25,3 +25,244 @@
 2025-08-05T10:08:17.526+08:00  INFO 5551 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-08-05T10:08:17.535+08:00  INFO 5551 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-08-05T10:08:17.557+08:00  INFO 5551 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-05T10:24:05.309+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.service.CustomerServiceTest        : Starting CustomerServiceTest using Java 17.0.15 with PID 2615 (started by leonicus in /home/leonicus/practice/nimban-backend)
+2025-08-05T10:24:05.312+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.service.CustomerServiceTest        : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T10:24:06.224+08:00  INFO 2615 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T10:24:06.346+08:00  INFO 2615 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 4 JPA repository interfaces.
+2025-08-05T10:24:06.947+08:00  INFO 2615 --- [nimban-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T10:24:06.997+08:00  INFO 2615 --- [nimban-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-08-05T10:24:07.039+08:00  INFO 2615 --- [nimban-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T10:24:07.582+08:00  INFO 2615 --- [nimban-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T10:24:07.610+08:00  INFO 2615 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-05T10:24:08.025+08:00  INFO 2615 --- [nimban-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6851b296
+2025-08-05T10:24:08.028+08:00  INFO 2615 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-05T10:24:08.087+08:00  WARN 2615 --- [nimban-backend] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T10:24:08.132+08:00  INFO 2615 --- [nimban-backend] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.18
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T10:24:09.911+08:00  INFO 2615 --- [nimban-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T10:24:10.120+08:00  INFO 2615 --- [nimban-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T10:24:11.398+08:00  WARN 2615 --- [nimban-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T10:24:12.127+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.service.CustomerServiceTest        : Started CustomerServiceTest in 7.284 seconds (process running for 8.799)
+2025-08-05T10:24:14.511+08:00  INFO 2615 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.NimbanBackendApplicationTests]: NimbanBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T10:24:14.542+08:00  INFO 2615 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.NimbanBackendApplicationTests
+2025-08-05T10:24:14.598+08:00  INFO 2615 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.exception.ProjectNotFoundExceptionTest]: ProjectNotFoundExceptionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T10:24:14.648+08:00  INFO 2615 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.exception.ProjectNotFoundExceptionTest
+2025-08-05T10:24:14.659+08:00  INFO 2615 --- [nimban-backend] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-08-05T10:24:14.767+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.e.ProjectNotFoundExceptionTest     : Starting ProjectNotFoundExceptionTest using Java 17.0.15 with PID 2615 (started by leonicus in /home/leonicus/practice/nimban-backend)
+2025-08-05T10:24:14.768+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.e.ProjectNotFoundExceptionTest     : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T10:24:15.330+08:00  INFO 2615 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T10:24:15.365+08:00  INFO 2615 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 4 JPA repository interfaces.
+2025-08-05T10:24:15.593+08:00  INFO 2615 --- [nimban-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T10:24:15.596+08:00  INFO 2615 --- [nimban-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T10:24:15.617+08:00  INFO 2615 --- [nimban-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T10:24:15.619+08:00  INFO 2615 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-08-05T10:24:15.735+08:00  INFO 2615 --- [nimban-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@ae094e8
+2025-08-05T10:24:15.736+08:00  INFO 2615 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-08-05T10:24:15.753+08:00  WARN 2615 --- [nimban-backend] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T10:24:15.758+08:00  INFO 2615 --- [nimban-backend] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 14.18
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T10:24:15.969+08:00  INFO 2615 --- [nimban-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T10:24:16.122+08:00  INFO 2615 --- [nimban-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T10:24:16.606+08:00  WARN 2615 --- [nimban-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T10:24:16.808+08:00  INFO 2615 --- [nimban-backend] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-05T10:24:16.809+08:00  INFO 2615 --- [nimban-backend] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-05T10:24:16.812+08:00  INFO 2615 --- [nimban-backend] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-08-05T10:24:16.839+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.e.ProjectNotFoundExceptionTest     : Started ProjectNotFoundExceptionTest in 2.182 seconds (process running for 13.511)
+2025-08-05T10:24:16.982+08:00 ERROR 2615 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🔴 2025-08-05 10:24:16.982193993 GET Project/9999 Error Exception Project not found with ID: 9999
+2025-08-05T10:24:17.140+08:00  INFO 2615 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.exception.GlobalExceptionHandlerTest]: GlobalExceptionHandlerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T10:24:17.145+08:00  INFO 2615 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.exception.GlobalExceptionHandlerTest
+2025-08-05T10:24:17.231+08:00 ERROR 2615 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🔴 2025-08-05 10:24:17.231329138 GET Project/9999 Error 404 Exception Customer with ID 9999 not found.
+2025-08-05T10:24:17.410+08:00  INFO 2615 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.exception.TaskColumnNestedNotFoundTest]: TaskColumnNestedNotFoundTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T10:24:17.415+08:00  INFO 2615 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.exception.TaskColumnNestedNotFoundTest
+2025-08-05T10:24:17.636+08:00 ERROR 2615 --- [nimban-backend] [main] c.e.n.controller.TaskColumnController    : 🔴 2025-08-05 10:24:17.636673671 GET TaskColumn/8888 Error Exception TaskColumn not found with ID: 8888
+2025-08-05T10:24:17.664+08:00  INFO 2615 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.exception.CustomerExceptionHandlingTest]: CustomerExceptionHandlingTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T10:24:17.672+08:00  INFO 2615 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.exception.CustomerExceptionHandlingTest
+2025-08-05T10:24:17.691+08:00 ERROR 2615 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🔴 2025-08-05 10:24:17.691921701 GET Project/9999 Error 404 Exception Customer with ID 9999 not found.
+2025-08-05T10:24:17.715+08:00  INFO 2615 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.exception.TaskNotFoundExceptionTest]: TaskNotFoundExceptionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T10:24:17.723+08:00  INFO 2615 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.exception.TaskNotFoundExceptionTest
+2025-08-05T10:24:17.744+08:00 ERROR 2615 --- [nimban-backend] [main] c.e.n.controller.TaskController          : 🔴 2025-08-05 10:24:17.744624008 GET Task/4242 Error Exception Task not found with ID: 4242
+2025-08-05T10:24:17.776+08:00  INFO 2615 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.validation.CustomerValidationTestSP]: CustomerValidationTestSP does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T10:24:17.797+08:00  INFO 2615 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.validation.CustomerValidationTestSP
+2025-08-05T10:24:18.219+08:00  INFO 2615 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.controller.CustomerControllerTest]: CustomerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T10:24:18.237+08:00  INFO 2615 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.controller.CustomerControllerTest
+2025-08-05T10:24:18.333+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🟢 2025-08-05 10:24:18.333874771 PUT Customer/5 Success
+2025-08-05T10:24:18.408+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🟢 2025-08-05 10:24:18.408213976 POST Customer Success
+2025-08-05T10:24:18.457+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🟢 2025-08-05 10:24:18.457821494 GET Project/8 Success
+2025-08-05T10:24:18.521+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🟢 2025-08-05 10:24:18.521831463 DELETE Customer/9 Success
+2025-08-05T10:24:18.604+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🟢 2025-08-05 10:24:18.604849994 GET Customers Success
+2025-08-05T10:24:18.632+08:00  INFO 2615 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.controller.TaskControllerTest]: TaskControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T10:24:18.638+08:00  INFO 2615 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.controller.TaskControllerTest
+2025-08-05T10:24:18.730+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.TaskController          : 🟢 2025-08-05 10:24:18.730442590 PATCH Task/6 Success
+2025-08-05T10:24:18.837+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 10:24:18.837621107 POST Project/8/tasks Success
+2025-08-05T10:24:18.911+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.TaskController          : 🟢 2025-08-05 10:24:18.911189223 DELETE Task/9 Success
+2025-08-05T10:24:18.984+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.TaskController          : 🟢 2025-08-05 10:24:18.984414153 GET Tasks Success
+2025-08-05T10:24:19.083+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.TaskController          : 🟢 2025-08-05 10:24:19.083215972 PUT Task/11 Success
+2025-08-05T10:24:19.160+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.TaskController          : 🟢 2025-08-05 10:24:19.160527727 GET Task/12 Success
+2025-08-05T10:24:19.179+08:00  INFO 2615 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.controller.CustomerPatchEmailTest]: CustomerPatchEmailTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T10:24:19.185+08:00  INFO 2615 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.controller.CustomerPatchEmailTest
+2025-08-05T10:24:19.193+08:00  INFO 2615 --- [nimban-backend] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-08-05T10:24:19.240+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.CustomerPatchEmailTest  : Starting CustomerPatchEmailTest using Java 17.0.15 with PID 2615 (started by leonicus in /home/leonicus/practice/nimban-backend)
+2025-08-05T10:24:19.241+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.CustomerPatchEmailTest  : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T10:24:19.589+08:00  INFO 2615 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T10:24:19.620+08:00  INFO 2615 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 4 JPA repository interfaces.
+2025-08-05T10:24:19.814+08:00  INFO 2615 --- [nimban-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T10:24:19.820+08:00  INFO 2615 --- [nimban-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T10:24:19.835+08:00  INFO 2615 --- [nimban-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T10:24:19.837+08:00  INFO 2615 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-08-05T10:24:19.881+08:00  INFO 2615 --- [nimban-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@76774d3f
+2025-08-05T10:24:19.881+08:00  INFO 2615 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-08-05T10:24:19.893+08:00  WARN 2615 --- [nimban-backend] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T10:24:19.897+08:00  INFO 2615 --- [nimban-backend] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 14.18
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T10:24:20.012+08:00  INFO 2615 --- [nimban-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T10:24:20.188+08:00  INFO 2615 --- [nimban-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T10:24:20.561+08:00  WARN 2615 --- [nimban-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T10:24:20.686+08:00  INFO 2615 --- [nimban-backend] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-05T10:24:20.687+08:00  INFO 2615 --- [nimban-backend] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-05T10:24:20.689+08:00  INFO 2615 --- [nimban-backend] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-08-05T10:24:20.705+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.CustomerPatchEmailTest  : Started CustomerPatchEmailTest in 1.513 seconds (process running for 17.377)
+2025-08-05T10:24:20.773+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.CustomerController      : 🟢 2025-08-05 10:24:20.773971285 PATCH Customer/5 Success
+2025-08-05T10:24:20.804+08:00  INFO 2615 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.controller.ProjectControllerTest]: ProjectControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T10:24:20.811+08:00  INFO 2615 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.controller.ProjectControllerTest
+2025-08-05T10:24:20.955+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 10:24:20.955781400 DELETE Project/6 Success
+2025-08-05T10:24:21.032+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 10:24:21.032304360 PUT Project/7 Success
+2025-08-05T10:24:21.141+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 10:24:21.141411390 PATCH Project/8 Success
+2025-08-05T10:24:21.217+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 10:24:21.217696720 GET Projects Success
+2025-08-05T10:24:21.295+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 10:24:21.295818510 POST Project Success
+2025-08-05T10:24:21.368+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 10:24:21.368146989 POST Project/12/tasks Success
+2025-08-05T10:24:21.429+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.ProjectController       : 🟢 2025-08-05 10:24:21.429587977 GET Project/13 Success
+2025-08-05T10:24:21.449+08:00  INFO 2615 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.controller.TaskColumnControllerTest]: TaskColumnControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T10:24:21.457+08:00  INFO 2615 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.controller.TaskColumnControllerTest
+2025-08-05T10:24:21.520+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.TaskColumnController    : 🟢 2025-08-05 10:24:21.520031329 PUT TaskColumn/16 Success
+2025-08-05T10:24:21.591+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.TaskColumnController    : 🟢 2025-08-05 10:24:21.591629280 PATCH TaskColumn/17 Success
+2025-08-05T10:24:21.659+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.TaskColumnController    : 🟢 2025-08-05 10:24:21.658989330 POST TaskColumn Success
+2025-08-05T10:24:21.724+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.TaskColumnController    : 🟢 2025-08-05 10:24:21.724453241 GET TaskColumn/20 Success
+2025-08-05T10:24:21.799+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.TaskColumnController    : 🟢 2025-08-05 10:24:21.799269806 DELETE TaskColumn/21 Success
+2025-08-05T10:24:21.855+08:00  INFO 2615 --- [nimban-backend] [main] c.e.n.controller.TaskColumnController    : 🟢 2025-08-05 10:24:21.855944872 GET TaskColumns Success
+2025-08-05T10:24:21.875+08:00  INFO 2615 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T10:24:21.880+08:00  INFO 2615 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-05T10:24:21.902+08:00  INFO 2615 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-05T10:24:21.909+08:00  INFO 2615 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T10:24:21.912+08:00  INFO 2615 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-08-05T10:24:21.927+08:00  INFO 2615 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-08-05T10:24:21.932+08:00  INFO 2615 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T10:24:21.933+08:00  INFO 2615 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-08-05T10:24:21.952+08:00  INFO 2615 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-08-05T11:54:03.214+08:00  INFO 2493 --- [nimban-backend] [main] c.e.n.e.TaskNotFoundExceptionTest        : Starting TaskNotFoundExceptionTest using Java 17.0.15 with PID 2493 (started by leonicus in /home/leonicus/practice/nimban-backend)
+2025-08-05T11:54:03.217+08:00  INFO 2493 --- [nimban-backend] [main] c.e.n.e.TaskNotFoundExceptionTest        : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T11:54:04.025+08:00  INFO 2493 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T11:54:04.124+08:00  INFO 2493 --- [nimban-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 4 JPA repository interfaces.
+2025-08-05T11:54:04.701+08:00  INFO 2493 --- [nimban-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T11:54:04.760+08:00  INFO 2493 --- [nimban-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-08-05T11:54:04.800+08:00  INFO 2493 --- [nimban-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T11:54:05.249+08:00  INFO 2493 --- [nimban-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T11:54:05.279+08:00  INFO 2493 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-05T11:54:05.650+08:00  INFO 2493 --- [nimban-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@280484c7
+2025-08-05T11:54:05.652+08:00  INFO 2493 --- [nimban-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-05T11:54:05.702+08:00  WARN 2493 --- [nimban-backend] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T11:54:05.741+08:00  INFO 2493 --- [nimban-backend] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.18
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T11:54:07.043+08:00  INFO 2493 --- [nimban-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T11:54:07.207+08:00  INFO 2493 --- [nimban-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T11:54:08.193+08:00  WARN 2493 --- [nimban-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T11:54:08.707+08:00  INFO 2493 --- [nimban-backend] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-08-05T11:54:08.708+08:00  INFO 2493 --- [nimban-backend] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-08-05T11:54:08.712+08:00  INFO 2493 --- [nimban-backend] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-08-05T11:54:08.748+08:00  INFO 2493 --- [nimban-backend] [main] c.e.n.e.TaskNotFoundExceptionTest        : Started TaskNotFoundExceptionTest in 5.937 seconds (process running for 7.134)
+2025-08-05T11:54:09.315+08:00  WARN 2493 --- [nimban-backend] [main] c.e.n.exception.TaskNotFoundException    : 🔴 TaskNotFoundException triggered for ID: 4242
+2025-08-05T11:54:09.424+08:00  INFO 2493 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.exception.ProjectNotFoundExceptionTest]: ProjectNotFoundExceptionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T11:54:09.433+08:00  INFO 2493 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.exception.ProjectNotFoundExceptionTest
+2025-08-05T11:54:09.449+08:00  WARN 2493 --- [nimban-backend] [main] c.e.n.e.ProjectNotFoundException         : 🔴 ProjectNotFoundException triggered for ID: 9999
+2025-08-05T11:54:09.461+08:00  INFO 2493 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.exception.GlobalExceptionHandlerTest]: GlobalExceptionHandlerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T11:54:09.466+08:00  INFO 2493 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.exception.GlobalExceptionHandlerTest
+2025-08-05T11:54:09.504+08:00  WARN 2493 --- [nimban-backend] [main] c.e.n.e.CustomerNotFoundException        : 🔴 CustomerNotFoundException triggered for ID: 9999
+2025-08-05T11:54:09.641+08:00  INFO 2493 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.exception.TaskColumnNestedNotFoundTest]: TaskColumnNestedNotFoundTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T11:54:09.645+08:00  INFO 2493 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.exception.TaskColumnNestedNotFoundTest
+2025-08-05T11:54:09.874+08:00  WARN 2493 --- [nimban-backend] [main] c.e.n.e.TaskColumnNotFoundException      : 🔴 TaskColumnNotFoundException triggered for ID: 8888
+2025-08-05T11:54:09.888+08:00  INFO 2493 --- [nimban-backend] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.nimban_backend.exception.CustomerExceptionHandlingTest]: CustomerExceptionHandlingTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-05T11:54:09.890+08:00  INFO 2493 --- [nimban-backend] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.nimban_backend.NimbanBackendApplication for test class com.example.nimban_backend.exception.CustomerExceptionHandlingTest
+2025-08-05T11:54:09.903+08:00  WARN 2493 --- [nimban-backend] [main] c.e.n.e.CustomerNotFoundException        : 🔴 CustomerNotFoundException triggered for ID: 9999
+2025-08-05T11:54:09.918+08:00  INFO 2493 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T11:54:09.920+08:00  INFO 2493 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-05T11:54:09.934+08:00  INFO 2493 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-05T11:55:20.860+08:00  INFO 3519 --- [nimban-backend] [restartedMain] c.e.n.NimbanBackendApplication           : Starting NimbanBackendApplication using Java 17.0.15 with PID 3519 (/home/leonicus/practice/nimban-backend/target/classes started by leonicus in /home/leonicus/practice/nimban-backend)
+2025-08-05T11:55:20.862+08:00  INFO 3519 --- [nimban-backend] [restartedMain] c.e.n.NimbanBackendApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-08-05T11:55:20.928+08:00  INFO 3519 --- [nimban-backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-05T11:55:20.929+08:00  INFO 3519 --- [nimban-backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-05T11:55:21.548+08:00  INFO 3519 --- [nimban-backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-05T11:55:21.614+08:00  INFO 3519 --- [nimban-backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2025-08-05T11:55:22.057+08:00  INFO 3519 --- [nimban-backend] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-05T11:55:22.069+08:00  INFO 3519 --- [nimban-backend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-05T11:55:22.070+08:00  INFO 3519 --- [nimban-backend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-05T11:55:22.106+08:00  INFO 3519 --- [nimban-backend] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-05T11:55:22.106+08:00  INFO 3519 --- [nimban-backend] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1177 ms
+2025-08-05T11:55:22.239+08:00  INFO 3519 --- [nimban-backend] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-05T11:55:22.281+08:00  INFO 3519 --- [nimban-backend] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-08-05T11:55:22.307+08:00  INFO 3519 --- [nimban-backend] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-05T11:55:22.507+08:00  INFO 3519 --- [nimban-backend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-05T11:55:22.538+08:00  INFO 3519 --- [nimban-backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-05T11:55:22.807+08:00  INFO 3519 --- [nimban-backend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6028647b
+2025-08-05T11:55:22.809+08:00  INFO 3519 --- [nimban-backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-05T11:55:22.836+08:00  WARN 3519 --- [nimban-backend] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-05T11:55:22.855+08:00  INFO 3519 --- [nimban-backend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 14.18
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-05T11:55:23.742+08:00  INFO 3519 --- [nimban-backend] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-05T11:55:23.859+08:00  INFO 3519 --- [nimban-backend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T11:55:24.485+08:00  WARN 3519 --- [nimban-backend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-05T11:55:24.782+08:00  INFO 3519 --- [nimban-backend] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-05T11:55:24.813+08:00  INFO 3519 --- [nimban-backend] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-05T11:55:24.824+08:00  INFO 3519 --- [nimban-backend] [restartedMain] c.e.n.NimbanBackendApplication           : Started NimbanBackendApplication in 4.356 seconds (process running for 4.664)
+2025-08-05T11:55:28.449+08:00  INFO 3519 --- [nimban-backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-05T11:55:28.451+08:00  INFO 3519 --- [nimban-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-05T11:55:28.454+08:00  INFO 3519 --- [nimban-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-08-05T11:55:28.585+08:00  WARN 3519 --- [nimban-backend] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .]
+2025-08-05T11:55:28.747+08:00  WARN 3519 --- [nimban-backend] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-08-05T11:55:34.243+08:00  INFO 3519 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.CustomerController      : 🟢 2025-08-05 11:55:34.243440863 GET Customers Success
+2025-08-05T11:55:34.317+08:00  WARN 3519 --- [nimban-backend] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-08-05T11:55:45.026+08:00  INFO 3519 --- [nimban-backend] [http-nio-8080-exec-6] c.e.n.controller.CustomerController      : 🟢 2025-08-05 11:55:45.026587609 GET Customers Success
+2025-08-05T11:55:55.494+08:00  INFO 3519 --- [nimban-backend] [http-nio-8080-exec-7] c.e.n.controller.CustomerController      : 🟢 2025-08-05 11:55:55.494841167 GET Customer/2 Success
+2025-08-05T11:56:01.329+08:00  WARN 3519 --- [nimban-backend] [http-nio-8080-exec-8] c.e.n.e.CustomerNotFoundException        : 🔴 CustomerNotFoundException triggered for ID: 999
+2025-08-05T11:56:01.333+08:00  WARN 3519 --- [nimban-backend] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.nimban_backend.exception.CustomerNotFoundException: Customer with ID 999 not found]
+2025-08-05T11:56:18.721+08:00  INFO 3519 --- [nimban-backend] [http-nio-8080-exec-9] c.e.n.controller.ProjectController       : 🟢 2025-08-05 11:56:18.721958982 GET Projects Success
+2025-08-05T11:56:22.966+08:00  INFO 3519 --- [nimban-backend] [http-nio-8080-exec-10] c.e.n.controller.ProjectController       : 🟢 2025-08-05 11:56:22.966692168 GET Project/2 Success
+2025-08-05T11:56:26.878+08:00  WARN 3519 --- [nimban-backend] [http-nio-8080-exec-1] c.e.n.e.ProjectNotFoundException         : 🔴 ProjectNotFoundException triggered for ID: 999
+2025-08-05T11:56:26.880+08:00  WARN 3519 --- [nimban-backend] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.nimban_backend.exception.ProjectNotFoundException: Project not found with ID: 999]
+2025-08-05T11:56:37.290+08:00  INFO 3519 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.TaskController          : 🟢 2025-08-05 11:56:37.290417243 GET Tasks Success
+2025-08-05T11:56:42.237+08:00  INFO 3519 --- [nimban-backend] [http-nio-8080-exec-4] c.e.n.controller.TaskController          : 🟢 2025-08-05 11:56:42.237225704 GET Task/1 Success
+2025-08-05T11:56:47.438+08:00  WARN 3519 --- [nimban-backend] [http-nio-8080-exec-5] c.e.n.exception.TaskNotFoundException    : 🔴 TaskNotFoundException triggered for ID: 999
+2025-08-05T11:56:47.440+08:00  WARN 3519 --- [nimban-backend] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.nimban_backend.exception.TaskNotFoundException: Task not found with ID: 999]
+2025-08-05T11:57:42.663+08:00  INFO 3519 --- [nimban-backend] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05T11:57:42.669+08:00  INFO 3519 --- [nimban-backend] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-05T11:57:42.682+08:00  INFO 3519 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-05T11:57:42.691+08:00  INFO 3519 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-05T11:57:42.715+08:00  INFO 3519 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
