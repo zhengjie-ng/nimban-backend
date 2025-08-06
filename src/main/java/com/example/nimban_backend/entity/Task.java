@@ -56,7 +56,7 @@ public class Task {
     @Column(name = "assignees_Id")
     private List<Long> assigneesId;
 
-    @Size(max = 50, message = "Code must not exceed 10 characters")
+    @Size(max = 10, message = "Code must not exceed 10 characters")
     @Column(name = "code")
     private String code;
 
