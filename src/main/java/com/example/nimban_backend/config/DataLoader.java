@@ -50,9 +50,9 @@ public class DataLoader {
 
         Project project1 = projectRepository.save(Project.builder().name("Monday").taskTotalId(4L).authorId(1L).hidden(false).teammatesId(Arrays.asList(1L, 2L)).build());
         Project project2 = projectRepository.save(Project.builder().name("Tuesday").taskTotalId(1L).authorId(1L).hidden(false).teammatesId(Arrays.asList(1L, 2L, 3L)).build());
-        Project project3 = projectRepository.save(Project.builder().name("Monday").authorId(2L).taskTotalId(2L).hidden(false).teammatesId(Arrays.asList(2L)).build());
-        Project project4 = projectRepository.save(Project.builder().name("Friday").authorId(3L).taskTotalId(3L).hidden(false).teammatesId(Arrays.asList(3L)).build());
-        Project project5 = projectRepository.save(Project.builder().name("Sunday").authorId(4L).taskTotalId(5L).hidden(false).teammatesId(Arrays.asList(4L)).build());
+        Project project3 = projectRepository.save(Project.builder().name("Wednesday").authorId(2L).taskTotalId(0L).hidden(false).teammatesId(Arrays.asList(2L)).build());
+        Project project4 = projectRepository.save(Project.builder().name("Friday").authorId(3L).taskTotalId(0L).hidden(false).teammatesId(Arrays.asList(3L)).build());
+        Project project5 = projectRepository.save(Project.builder().name("Sunday").authorId(4L).taskTotalId(0L).hidden(false).teammatesId(Arrays.asList(4L)).build());
 
         taskColumnRepository.save(TaskColumn.builder().name("Not Started").project(project1).position(0).build());
         taskColumnRepository.save(TaskColumn.builder().name("In Progress").project(project1).position(1).build());
