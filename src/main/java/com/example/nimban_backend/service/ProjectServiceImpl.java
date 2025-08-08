@@ -5,10 +5,12 @@ import java.util.List;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+import com.example.nimban_backend.entity.Customer;
 import com.example.nimban_backend.entity.Project;
 import com.example.nimban_backend.entity.Task;
 import com.example.nimban_backend.entity.TaskColumn;
 import com.example.nimban_backend.exception.ProjectNotFoundException;
+import com.example.nimban_backend.repository.CustomerRepository;
 import com.example.nimban_backend.repository.ProjectRepository;
 import com.example.nimban_backend.repository.TaskColumnRepository;
 import com.example.nimban_backend.repository.TaskRepository;
@@ -17,23 +19,49 @@ import com.example.nimban_backend.repository.TaskRepository;
 @Primary
 @Service
 public class ProjectServiceImpl implements ProjectService {
-    private ProjectRepository projectRepository;
-    private TaskColumnRepository taskColumnRepository;
-    private TaskRepository taskRepository;
+    private final ProjectRepository projectRepository;
+    private final TaskColumnRepository taskColumnRepository;
+    private final TaskRepository taskRepository;
+    private final CustomerRepository customerRepository;
 
-    public ProjectServiceImpl(ProjectRepository projectRepository, TaskRepository taskRepository,
-            TaskColumnRepository taskColumnRepository) {
+    public ProjectServiceImpl(
+        ProjectRepository projectRepository,
+        TaskRepository taskRepository,
+        TaskColumnRepository taskColumnRepository,
+        CustomerRepository customerRepository // new!
+    ) {
         this.projectRepository = projectRepository;
         this.taskRepository = taskRepository;
         this.taskColumnRepository = taskColumnRepository;
-
+        this.customerRepository = customerRepository;
     }
 
     // CRUD
     // Create
     @Override
     public Project createProject(Project project) {
-        return projectRepository.save(project);
+        
+        Project savedProject = projectRepository.save(project);
+        Long newProjectId = savedProject.getId();
+
+        
+        for (Long teammateId : project.getTeammatesId()) {
+            customerRepository.findById(teammateId).ifPresent(customer -> {
+                List<Long> existingProjects = customer.getProjectsId();
+
+                if (existingProjects == null) {
+                    existingProjects = new java.util.ArrayList<>();
+                }
+
+                if (!existingProjects.contains(newProjectId)) {
+                    existingProjects.add(newProjectId);
+                    customer.setProjectsId(existingProjects);
+                    customerRepository.save(customer);
+                }
+            });
+        }
+
+        return savedProject;
     }
 
     // Read
@@ -101,6 +129,19 @@ public class ProjectServiceImpl implements ProjectService {
     public void deleteProject(Long id) {
         Project project = projectRepository.findById(id)
             .orElseThrow(() -> new ProjectNotFoundException(id));
+
+        // Remove project ID from all customers' projects list
+        List<Customer> allCustomers = customerRepository.findAll();
+        for (Customer customer : allCustomers) {
+            List<Long> projects = customer.getProjectsId();
+            if (projects != null && projects.contains(id)) {
+                projects.remove(id);               // Remove deleted project ID
+                customer.setProjectsId(projects);  // Update list
+                customerRepository.save(customer); // Save changes
+            }
+        }
+
+        // Finally delete the project entity
         projectRepository.delete(project);
     }
 
