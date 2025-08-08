@@ -1352,26 +1352,7 @@ Caused by: java.lang.NumberFormatException: For input string: "null"
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-08-08T00:28:07.869+08:00  INFO 29803 --- [nimban-backend] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-08-08T00:28:08.045+08:00  INFO 29803 --- [nimban-backend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-08-08T00:28:08.966+08:00  WARN 29803 --- [nimban-backend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-08-08T00:28:09.373+08:00  INFO 29803 --- [nimban-backend] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-08-08T00:28:09.416+08:00  INFO 29803 --- [nimban-backend] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-08-08T00:28:09.434+08:00  INFO 29803 --- [nimban-backend] [restartedMain] c.e.n.NimbanBackendApplication           : Started NimbanBackendApplication in 6.743 seconds (process running for 7.329)
-2025-08-08T00:28:10.102+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-08-08T00:28:10.103+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-08-08T00:28:10.106+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-08-08T00:28:10.317+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-1] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:10.317953774 GET Customers Success
-2025-08-08T00:28:10.410+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-2] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:10.410092674 GET Customer/1 Success
-2025-08-08T00:28:10.438+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:10.438212086 GET Customer/1 Success
-2025-08-08T00:28:10.478+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-4] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:10.478702243 GET Project/1 Success
-2025-08-08T00:28:10.478+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-5] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:10.478695288 GET Project/2 Success
-2025-08-08T00:28:20.799+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-8] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:20.799746941 POST Project Success
-2025-08-08T00:28:23.857+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-10] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:23.857322766 PUT Customer/1 Success
-2025-08-08T00:28:23.915+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-1] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:23.915767235 GET Customer/1 Success
-2025-08-08T00:28:23.920+08:00 ERROR 29803 --- [nimban-backend] [http-nio-8080-exec-2] c.e.n.exception.GlobalExceptionHandler   : 🔴 Unhandled exception occurred: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
 
-org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:301) ~[spring-web-6.2.8.jar:6.2.8]
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:136) ~[spring-web-6.2.8.jar:6.2.8]
 	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.2.8.jar:6.2.8]
@@ -1387,41 +1368,7 @@ org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: M
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.8.jar:6.2.8]
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.42.jar:6.0]
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.8.jar:6.2.8]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.42.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.42.jar:10.1.42]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.8.jar:6.2.8]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.8.jar:6.2.8]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.8.jar:6.2.8]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
-	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
-Caused by: java.lang.NumberFormatException: For input string: "null"
+
 	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
 	at java.base/java.lang.Long.parseLong(Long.java:711) ~[na:na]
 	at java.base/java.lang.Long.valueOf(Long.java:1163) ~[na:na]
@@ -1434,103 +1381,4 @@ Caused by: java.lang.NumberFormatException: For input string: "null"
 	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53) ~[spring-beans-6.2.8.jar:6.2.8]
 	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:867) ~[spring-context-6.2.8.jar:6.2.8]
 	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:293) ~[spring-web-6.2.8.jar:6.2.8]
-	... 48 common frames omitted
 
-2025-08-08T00:28:23.935+08:00  WARN 29803 --- [nimban-backend] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "null"]
-2025-08-08T00:28:23.992+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:23.992890813 GET Project/1 Success
-2025-08-08T00:28:23.999+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-5] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:23.999459461 GET Project/2 Success
-2025-08-08T00:28:24.019+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-4] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:24.019096913 GET Project/2 Success
-2025-08-08T00:28:24.138+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-6] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:24.138712871 GET Customer/2 Success
-2025-08-08T00:28:24.140+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-7] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:24.140352030 GET Customer/1 Success
-2025-08-08T00:28:24.148+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-9] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:24.148017600 GET Customer/3 Success
-2025-08-08T00:28:24.366+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-8] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:24.366281717 PUT Customer/1 Success
-2025-08-08T00:28:24.513+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-10] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:24.513894314 GET Customer/1 Success
-2025-08-08T00:28:24.514+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-1] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:24.514134944 GET Project/2 Success
-2025-08-08T00:28:24.572+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:24.571992034 GET Customer/2 Success
-2025-08-08T00:28:24.573+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-2] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:24.572995132 GET Customer/1 Success
-2025-08-08T00:28:24.576+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-5] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:24.576472556 GET Customer/3 Success
-2025-08-08T00:28:24.582+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-4] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:24.582202937 GET Project/1 Success
-2025-08-08T00:28:24.584+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-6] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:24.584306884 GET Project/2 Success
-2025-08-08T00:28:24.600+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-7] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:24.600127717 GET Project/2 Success
-2025-08-08T00:28:24.684+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-10] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:24.684760922 GET Customer/3 Success
-2025-08-08T00:28:24.684+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-8] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:24.684329504 GET Customer/1 Success
-2025-08-08T00:28:24.684+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-9] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:24.684675865 GET Customer/2 Success
-2025-08-08T00:28:26.049+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-4] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.049365195 PUT Customer/1 Success
-2025-08-08T00:28:26.137+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-6] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.137786308 GET Customer/1 Success
-2025-08-08T00:28:26.141+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-7] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:26.141051032 GET Project/2 Success
-2025-08-08T00:28:26.296+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-9] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.296930469 GET Customer/2 Success
-2025-08-08T00:28:26.298+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-8] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.298334752 PUT Customer/1 Success
-2025-08-08T00:28:26.308+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.308313296 GET Customer/1 Success
-2025-08-08T00:28:26.309+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-2] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:26.309035235 GET Project/1 Success
-2025-08-08T00:28:26.310+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-1] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.310572829 GET Customer/3 Success
-2025-08-08T00:28:26.322+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-5] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:26.322649821 GET Project/2 Success
-2025-08-08T00:28:26.329+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-10] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:26.329146303 GET Project/1 Success
-2025-08-08T00:28:26.504+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-4] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.504043028 GET Customer/1 Success
-2025-08-08T00:28:26.504+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-6] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.504117997 GET Customer/2 Success
-2025-08-08T00:28:26.521+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-7] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.521410819 GET Customer/1 Success
-2025-08-08T00:28:26.730+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-8] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:26.730749840 GET Project/1 Success
-2025-08-08T00:28:26.730+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-9] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:26.730743423 GET Project/2 Success
-2025-08-08T00:28:26.745+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:26.745162806 GET Project/1 Success
-2025-08-08T00:28:26.824+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-2] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.824377965 GET Customer/2 Success
-2025-08-08T00:28:26.840+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-1] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.840591082 PUT Customer/1 Success
-2025-08-08T00:28:26.856+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-5] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.856358728 GET Customer/1 Success
-2025-08-08T00:28:26.913+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-10] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.913781059 GET Customer/1 Success
-2025-08-08T00:28:26.914+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-4] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:26.914933271 GET Project/1 Success
-2025-08-08T00:28:26.989+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-9] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:26.989311216 GET Project/2 Success
-2025-08-08T00:28:26.989+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-6] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.989036024 GET Customer/1 Success
-2025-08-08T00:28:26.995+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-7] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:26.995207679 GET Customer/2 Success
-2025-08-08T00:28:26.998+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-8] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:26.998387561 GET Project/1 Success
-2025-08-08T00:28:27.017+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:27.017815682 GET Project/2 Success
-2025-08-08T00:28:27.042+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-2] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.042397147 PUT Customer/1 Success
-2025-08-08T00:28:27.092+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-1] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.092367625 GET Customer/1 Success
-2025-08-08T00:28:27.092+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-5] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.092955698 GET Customer/2 Success
-2025-08-08T00:28:27.094+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-10] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.094089898 GET Customer/3 Success
-2025-08-08T00:28:27.204+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-4] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.204630939 GET Customer/1 Success
-2025-08-08T00:28:27.205+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-7] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:27.205108573 GET Project/2 Success
-2025-08-08T00:28:27.415+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-8] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.415175559 GET Customer/3 Success
-2025-08-08T00:28:27.415+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-9] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.415177475 GET Customer/2 Success
-2025-08-08T00:28:27.416+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:27.416869469 GET Project/2 Success
-2025-08-08T00:28:27.422+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-2] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:27.422488701 GET Project/1 Success
-2025-08-08T00:28:27.425+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-6] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.425745281 PUT Customer/1 Success
-2025-08-08T00:28:27.436+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-1] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.436770640 GET Customer/1 Success
-2025-08-08T00:28:27.436+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-5] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:27.436770813 GET Project/2 Success
-2025-08-08T00:28:27.574+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-10] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.574923811 GET Customer/1 Success
-2025-08-08T00:28:27.574+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-4] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.574931696 GET Customer/3 Success
-2025-08-08T00:28:27.574+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-7] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.574929819 GET Customer/2 Success
-2025-08-08T00:28:27.592+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-9] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.592966743 GET Customer/1 Success
-2025-08-08T00:28:27.730+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-8] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:27.730446846 GET Project/1 Success
-2025-08-08T00:28:27.747+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:27.747193250 GET Project/2 Success
-2025-08-08T00:28:27.759+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-6] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:27.759192014 GET Project/1 Success
-2025-08-08T00:28:27.820+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-1] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.820128544 GET Customer/1 Success
-2025-08-08T00:28:27.820+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-2] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:27.820557954 GET Customer/2 Success
-2025-08-08T00:28:45.437+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-8] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:45.437588048 GET Customers Success
-2025-08-08T00:28:45.450+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:45.450744982 GET Customer/1 Success
-2025-08-08T00:28:45.465+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-6] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:45.465835696 GET Customer/1 Success
-2025-08-08T00:28:45.480+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-1] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:45.480377157 GET Project/1 Success
-2025-08-08T00:28:45.484+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-2] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:45.484910502 GET Project/2 Success
-2025-08-08T00:28:45.494+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-5] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:45.494944764 GET Project/1 Success
-2025-08-08T00:28:45.533+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-7] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:28:45.533343087 GET Project/1 Success
-2025-08-08T00:28:45.558+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-10] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:45.558186732 GET Customer/2 Success
-2025-08-08T00:28:45.558+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-4] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:45.558186642 GET Customer/1 Success
-2025-08-08T00:28:45.668+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-9] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:45.668463740 GET Customer/1 Success
-2025-08-08T00:28:45.668+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-8] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:45.668518621 GET Customer/2 Success
-2025-08-08T00:28:53.036+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:53.036810908 GET Customer/1 Success
-2025-08-08T00:28:56.540+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-2] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:28:56.540063270 GET Customer/1 Success
-2025-08-08T00:29:10.111+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-5] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:29:10.111860035 POST Project Success
-2025-08-08T00:29:21.908+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-7] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:29:21.908537583 GET Customers Success
-2025-08-08T00:29:21.918+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-4] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:29:21.918928901 GET Customer/1 Success
-2025-08-08T00:29:21.933+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-10] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:29:21.933285367 GET Customer/1 Success
-2025-08-08T00:29:21.950+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-9] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:29:21.950751556 GET Project/1 Success
-2025-08-08T00:29:21.952+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-8] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:29:21.952606246 GET Project/2 Success
-2025-08-08T00:29:21.954+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-3] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:29:21.954259840 GET Project/7 Success
-2025-08-08T00:29:21.965+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-6] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:29:21.965260816 GET Project/1 Success
-2025-08-08T00:29:22.001+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-1] c.e.n.controller.ProjectController       : 🟢 2025-08-08 00:29:22.001811748 GET Project/1 Success
-2025-08-08T00:29:22.026+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-5] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:29:22.026178251 GET Customer/2 Success
-2025-08-08T00:29:22.026+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-2] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:29:22.026961716 GET Customer/1 Success
-2025-08-08T00:29:22.125+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-4] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:29:22.125764043 GET Customer/2 Success
-2025-08-08T00:29:22.125+08:00  INFO 29803 --- [nimban-backend] [http-nio-8080-exec-7] c.e.n.controller.CustomerController      : 🟢 2025-08-08 00:29:22.125790341 GET Customer/1 Success
-2025-08-08T07:22:51.405+08:00  INFO 29803 --- [nimban-backend] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-08-08T07:22:52.182+08:00  INFO 29803 --- [nimban-backend] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-08-08T07:22:52.499+08:00  INFO 29803 --- [nimban-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-08-08T07:22:53.365+08:00  INFO 29803 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-08-08T07:22:53.737+08:00  INFO 29803 --- [nimban-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
