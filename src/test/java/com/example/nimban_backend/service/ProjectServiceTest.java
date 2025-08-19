@@ -54,23 +54,11 @@ class ProjectServiceTest {
                 .authorId(99L)
                 .build();
     }
-
-    // @Test
-    // void shouldCreateProject() {
-    // when(projectRepository.save(any(Project.class))).thenReturn(sampleProject);
-
-    // Project created = projectService.createProject(sampleProject);
-
-    // assertEquals("Alpha", created.getName());
-    // verify(projectRepository).save(sampleProject);
-    // }
     
     @Test
     void shouldCreateProject() {
-        // Mock project repository save
         when(projectRepository.save(any(Project.class))).thenReturn(sampleProject);
 
-        // Mock customer repository behavior
         Customer teammate1 = new Customer();
         teammate1.setId(100L);
         teammate1.setProjectsId(new ArrayList<>());
@@ -144,21 +132,11 @@ class ProjectServiceTest {
         assertEquals(Arrays.asList(100L, 200L), result.getTeammatesId()); // unchanged
     }
 
-    // @Test
-    // void shouldDeleteProject() {
-    // when(projectRepository.findById(1L)).thenReturn(Optional.of(sampleProject));
-
-    // projectService.deleteProject(1L);
-
-    // verify(projectRepository).delete(sampleProject);
-    // }
-
     @Test
     void shouldDeleteProject() {
-        // Mock project repository
+
         when(projectRepository.findById(1L)).thenReturn(Optional.of(sampleProject));
 
-        // Mock customers with this project in their list
         Customer customer1 = new Customer();
         customer1.setId(1L);
         customer1.setProjectsId(new ArrayList<>(List.of(1L)));
