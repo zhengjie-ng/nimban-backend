@@ -10,6 +10,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
@@ -18,13 +20,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
 
 
 
@@ -57,13 +54,6 @@ public class Customer {
     private String email;
 
     @Column(name = "password")
-    @NotBlank(message = "Password is required")
-    @Size(min = 8, message = "Password must be at least 8 characters")
-    // Strong password rule (uppercase, lowercase, number, special char)
-    @Pattern(
-        regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
-        message = "Password must include upper and lower case letters, a number, and a special character"
-    )
     private String password;
 
     @Column(name = "last_accessed_id")
@@ -90,6 +80,29 @@ public class Customer {
     @Column(name = "updated_at", nullable = false)
     @Setter(lombok.AccessLevel.NONE)
     private LocalDateTime updatedAt;
+
+    // Security fields
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
+
+    @Column(name = "account_non_locked")
+    private boolean accountNonLocked = true;
+
+    @Column(name = "account_non_expired")
+    private boolean accountNonExpired = true;
+
+    @Column(name = "credentials_non_expired")
+    private boolean credentialsNonExpired = true;
+
+    @Column(name = "enabled")
+    private boolean enabled = true;
+
+    @Column(name = "credentials_expiry_date")
+    private LocalDate credentialsExpiryDate;
+
+    @Column(name = "account_expiry_date")
+    private LocalDate accountExpiryDate;
 
     // triggered before an entity is saved
     @PrePersist
