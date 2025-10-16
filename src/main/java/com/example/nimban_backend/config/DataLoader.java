@@ -137,16 +137,16 @@ public class DataLoader {
                 Project project5 = projectRepository.save(Project.builder().name("Sunday").authorId(4L).taskTotalId(0L)
                                 .hidden(false).teammatesId(Arrays.asList(4L)).build());
 
-                taskColumnRepository
+                TaskColumn project1Col1 = taskColumnRepository
                                 .save(TaskColumn.builder().name("Not Started").project(project1).position(0).build());
-                taskColumnRepository
+                TaskColumn project1Col2 = taskColumnRepository
                                 .save(TaskColumn.builder().name("In Progress").project(project1).position(1).build());
-                taskColumnRepository.save(TaskColumn.builder().name("Done").project(project1).position(2).build());
-                taskColumnRepository
+                TaskColumn project1Col3 = taskColumnRepository.save(TaskColumn.builder().name("Done").project(project1).position(2).build());
+                TaskColumn project2Col1 = taskColumnRepository
                                 .save(TaskColumn.builder().name("Not Started").project(project2).position(0).build());
-                taskColumnRepository
+                TaskColumn project2Col2 = taskColumnRepository
                                 .save(TaskColumn.builder().name("In Progress").project(project2).position(1).build());
-                taskColumnRepository.save(TaskColumn.builder().name("Done").project(project2).position(2).build());
+                TaskColumn project2Col3 = taskColumnRepository.save(TaskColumn.builder().name("Done").project(project2).position(2).build());
                 taskColumnRepository
                                 .save(TaskColumn.builder().name("Not Started").project(project3).position(0).build());
                 taskColumnRepository
@@ -164,23 +164,23 @@ public class DataLoader {
                 taskColumnRepository.save(TaskColumn.builder().name("Done").project(project5).position(2).build());
 
                 taskRepository.save(Task.builder().name("Do laundry").project(project1).priority(1)
-                                .description("To wash all white clothes").statusId(1L).code("MON-0001")
+                                .description("To wash all white clothes").statusId(project1Col1.getId()).code("MON-0001")
                                 .assigneesId(List.of(1L)).position(0).build());
 
                 taskRepository.save(Task.builder().name("Wash dishes").project(project1).priority(2)
-                                .description("Wash with detergent").statusId(1L).code("MON-0002")
-                                .assigneesId(List.of(1L)).position(1).build());
+                                .description("Wash with detergent").statusId(project1Col1.getId()).code("MON-0002")
+                                .assigneesId(List.of(1L)).position(1000).build());
 
                 taskRepository.save(Task.builder().name("Mop floor").project(project1).priority(3)
-                                .description("Mop only the living room").statusId(1L).code("MON-0003")
-                                .assigneesId(List.of(1L)).position(2).build());
+                                .description("Mop only the living room").statusId(project1Col1.getId()).code("MON-0003")
+                                .assigneesId(List.of(1L)).position(2000).build());
 
                 taskRepository.save(Task.builder().name("Take out trash").project(project1).priority(4)
-                                .description("Clear trash before 7pm").statusId(2L).code("MON-0004")
-                                .assigneesId(List.of(1L)).position(3).build());
+                                .description("Clear trash before 7pm").statusId(project1Col2.getId()).code("MON-0004")
+                                .assigneesId(List.of(1L)).position(0).build());
 
                 taskRepository.save(Task.builder().name("Buy grocery").project(project2).priority(1)
-                                .description("Get rice, milk and bread").statusId(4L).code("TUE-0001")
+                                .description("Get rice, milk and bread").statusId(project2Col1.getId()).code("TUE-0001")
                                 .assigneesId(List.of(1L)).position(0).build());
 
         }
